@@ -4,7 +4,7 @@
 
 * Ali Saas (Ali-Saad)
 * Pragadeesh Raj (PragadeeshRaj)
-* Navodit Maheshwari (Navodit 1603)
+* Navodit Maheshwari (Navodit1603)
 * Ayman Kazi (aymankazi9)
 
 # Resources
