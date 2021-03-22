@@ -1,0 +1,116 @@
+{% extends "base.html"%}
+
+{% block head %}
+<title> Meet the Platypodes </title>
+{% endblock %}
+
+{% block content %}
+<head>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: "Times", sans-serif;
+        }
+
+        body_about {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background-color: #34495e;
+        }
+
+        .cards_about {
+            color: #323030;
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .card_about {
+            border-radius: 10px;
+            margin: 40px;
+            position: relative;
+            max-width: 250px;
+            max-height: 350px;
+            background-color: white;
+            box-shadow: 10px 20px 50px -30px black;
+        }
+
+        .card-title_about {
+            display: block;
+            text-align: center;
+            color: #78788c;
+            background-color: white;
+            padding: 2%;
+            border-top-right-radius: 10px;
+            border-top-left-radius: 10px;
+        }
+
+        .card_about img {
+            width: 80%;
+            height: 80%;
+            align-content: center;
+            object-fit: cover;
+            display: block;
+            border-radius: 10px;
+            position: relative;
+        }
+
+        img.center {
+            display: block;
+            margin: 0 auto;
+        }
+
+        .card-desc_about {
+            display: block;
+            font-size: 1.2rem;
+            position: absolute;
+            height: 0;
+            top: 0;
+            opacity: 0;
+            padding: 18px 8%;
+            background-color: white;
+            overflow-y: scroll;
+            transition: 0.8s ease;
+        }
+
+        .card_about:hover .card-desc_about {
+            opacity: 1;
+            height: 100%;
+        }
+    </style>
+</head>
+<body style="background-color: #59ABE3"></body>
+
+</br>
+<h1 style="font-family: Palatino; color: white; text-align: center">Meet the Platypodes</h1>
+</br>
+</br>
+<h2 style="font-family: Palatino; color: white; text-align: center">Get to know the developers and their backgrounds a bit better!</h2>
+<div class="cards_about">
+    <div class="card_about">
+        <h2 style="font-size: 20pt" class="card-title_about"><i style="margin-right: 0.3em; color: gray" class="fab fa-html5"></i>Ayman Kazi</h2>
+        <img class="center" src="/static/developers/Ayman.jpg" alt="">
+        <p class="card-desc_about">Your input</p>
+    </div>
+    <div class="card_about">
+        <h2 style="font-size: 20pt" class="card-title_about"><i style="margin-right: 0.3em; color: gray" class="fab fa-css3-alt"></i> Pragadeesh Raj</h2>
+        <img class="center" src="/static/developers/Pragadeesh.jpg" alt="">
+        <p class="card-desc_about">Your input.</p>
+    </div>
+    <div class="card_about">
+        <h2 style="font-size: 20pt" class="card-title_about"><i style="margin-right: 0.3em; color: gray" class="fas fa-database"></i>Ali Saad</h2>
+        <img class="center" src="/static/developers/Isai.jpg" alt="">
+        <p class="card-desc_about">Your input.</p>
+    </div>
+    <div class="card_about">
+        <h2 style="font-size: 20pt" class="card-title_about"><i style="margin-right: 0.3em; color: gray" class="fas fa-code"></i>Navodit Maheshwari</h2>
+        <img class="center" src="/static/developers/Karam.jpg" alt="">
+        <p class="card-desc_about">Your input.</p>
+    </div>
+
+</div>
+{% endblock %}
