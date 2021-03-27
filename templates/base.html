@@ -1,338 +1,148 @@
-<!-- imports source dictionary and its attributes from model.py -->
-{% set source = model.get_source() %}
-{% set model = model.get_model() %}
-{% set name = source["name"] %}
-
 <html>
 
-<head>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.15.3/css/all.css">
-    {% block head %}
-    {% endblock %}
-    <!-- Cookies consent banner -->
-    <link rel="stylesheet" type="text/css" href="https://cdn.wpcc.io/lib/1.0.2/cookieconsent.min.css"/>
-    <script src="https://cdn.wpcc.io/lib/1.0.2/cookieconsent.min.js" defer></script>
-    <script>window.addEventListener("load", function(){window.wpcc.init({"border":"thin","colors":{"popup":{"background":"#1b4b45","text":"#ffffff","border":"#b4eae4"},"button":{"background":"#b4eae4","text":"#000000"}},"position":"top","pushdown":true,"padding":"small","transparency":"25","fontsize":"large","corners":"small","content":{"message":"This website uses cookies to ensure you get the best experience on our website. ","link":"Learn more.","href":"/cookies/"}})});</script>
-</head>
+    <head>
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-<style>
-    @import url("https://fonts.googleapis.com/css?family=Lato");
-    * {
-        box-sizing: border-box;
-    }
-    html,
-    body {
-        font-family: 'Lato', sans-serif;
-        margin: 0;
-        min-height: 100vh;
-        padding: 0;
-    }
-    html:before,
-        /*body:before {
-            background: linear-gradient(35deg, #9a12b3, #c5eff7);
-            bottom: 0;
-            content: '';
-            height: 100vh;
+        <!-- fa-fa icons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.15.3/css/all.css">
+        {% block head %}
+        {% endblock %}
+
+        <!-- Cookies consent banner -->
+        <link rel="stylesheet" type="text/css" href="https://cdn.wpcc.io/lib/1.0.2/cookieconsent.min.css"/>
+        <script src="https://cdn.wpcc.io/lib/1.0.2/cookieconsent.min.js" defer></script>
+        <script>window.addEventListener("load", function(){window.wpcc.init({"border":"thin","colors":{"popup":{"background":"#1b4b45","text":"#ffffff","border":"#b4eae4"},"button":{"background":"#b4eae4","text":"#000000"}},"position":"top","pushdown":true,"padding":"small","transparency":"25","fontsize":"large","corners":"small","content":{"message":"This website uses cookies to ensure you get the best experience on our website. ","link":"Learn more.","href":"/cookies/"}})});</script>
+    </head>
+
+    <style>
+        body {
+            background: #ffffff;
+        }
+        body h1 {
+            position: fixed;
+            top: 40px;
+            left: 40px;
+            z-index: 6;
+            font-size: 20px;
+            font-weight: 900;
+            font-family: sans-serif;
+            text-transform: uppercase;
+        }
+        body h1 > span {
+            text-transform: none;
+            opacity: 0.5;
+            font-weight: 300;
+            font-size: 12px;
+        }
+        body input + label {
+            position: fixed;
+            top: 40px;
+            right: 40px;
+            height: 20px;
+            width: 15px;
+            z-index: 5;
+        }
+        body input + label span {
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            top: 50%;
+            margin-top: -1px;
             left: 0;
+            display: block;
+            background: #020304;
+            transition: 0.5s;
+        }
+        body input + label span:first-child {
+            top: 3px;
+        }
+        body input + label span:last-child {
+            top: 16px;
+        }
+        body label:hover {
+            cursor: pointer;
+        }
+        body input:checked + label span {
+            opacity: 0;
+            top: 50%;
+        }
+        body input:checked + label span:first-child {
+            opacity: 1;
+            transform: rotate(405deg);
+        }
+        body input:checked + label span:last-child {
+            opacity: 1;
+            transform: rotate(-405deg);
+        }
+        body input ~ nav {
+            background: #ffffff;
             position: fixed;
             top: 0;
-            right: 0;
-            width: 100vw;
-        }*/
-    svg {
-        cursor: pointer;
-        height: 44px;
-        width: 44px;
-    }
-    svg path {
-        fill: white;
-        box-shadow: 10px 10px 5px black;
-    }
-    ol {
-        list-style-type: none;
-    }
-    a[href] {
-        color: #fff;
-        position: relative;
-        text-decoration: none;
-    }
-    a[href]:hover:after {
-        transform: scaleX(1);
-    }
-    a[href]:after {
-        content: '';
-        position: absolute;
-        top: 100%;
-        height: 4px;
-        background: #ffffff;
-        left: 0;
-        right: 0;
-        transition: transform 0.15s;
-        transform-origin: left;
-        transform: scaleX(0);
-    }
-    .menu {
-        position: relative;
-        width: 250px;
-    }
-    .menu__content {
-        color: #ffffff;
-        margin: 0;
-        padding: 0 0 25px 0;
-        position: absolute;
-        right: 100%;
-        top: 0;
-        width: 250px;
-        z-index: 2;
-    }
-    .menu__toggle-label {
-        height: 44px;
-        left: 0;
-        position: absolute;
-        width: 44px;
-    }
-    .menu__toggle-label svg {
-        left: 0;
-        position: absolute;
-        top: 0;
-        transition: transform 0.15s;
-        z-index: 2;
-    }
-    .menu__toggle-label svg:nth-of-type(2) {
-        left: 250px;
-        transform: scale(0);
-    }
-    .menu__toggle {
-        opacity: 0;
-        position: fixed;
-    }
-    .menu__toggle:checked ~ .menu__toggle-label {
-        background: rgba(0,0,0,0.65);
-        height: 100vh;
-        left: 0;
-        position: fixed;
-        top: 0;
-        transition: background 0.15s;
-        width: 100vw;
-    }
-    .menu__toggle:checked ~ .menu__toggle-label svg:nth-of-type(1) {
-        transform: scale(0);
-    }
-    .menu__toggle:checked ~ .menu__toggle-label svg:nth-of-type(2) {
-        left: 250px;
-        transform: scale(1);
-        transition: transform 0.15s;
-        transition-delay: 0.925s;
-    }
-    .menu__toggle:checked ~ .menu__content {
-        transform: translate(100%, 0);
-    }
-    .menu__toggle:checked ~ .menu__content .menu-item {
-        transform: translateX(0);
-        transition: transform 0.15s cubic-bezier(0.175, 0.885, 0.32, 1.275), border-color 0.15s;
-    }
-    /* Border and Underline Color */
-    .menu__toggle:checked ~ .menu__content .menu-item:nth-of-type(1) {
-        border-color: #9A3471;
-    }
-    .menu__toggle:checked ~ .menu__content .menu-item:nth-of-type(1) a[href]:after {
-        background: #9A3471;
-    }
-    .menu__toggle:checked ~ .menu__content .menu-item:nth-of-type(2) {
-        border-color: #C83E77;
-    }
-    .menu__toggle:checked ~ .menu__content .menu-item:nth-of-type(2) a[href]:after {
-        background: #C83E77;
-    }
-    .menu__toggle:checked ~ .menu__content .menu-item:nth-of-type(3) {
-        border-color: #FB646E;
-    }
-    .menu__toggle:checked ~ .menu__content .menu-item:nth-of-type(3) a[href]:after {
-        background: #FB646E;
-    }
-    .menu__toggle:checked ~ .menu__content .menu-item:nth-of-type(4) {
-        border-color: #f5ab35;
-    }
-    .menu__toggle:checked ~ .menu__content .menu-item:nth-of-type(4) a[href]:after {
-        background: #f5ab35;
-    }
-    .menu__toggle:checked ~ .menu__content .menu-item:nth-of-type(5) {
-        border-color: #F6CAA1;
-    }
-    .menu__toggle:checked ~ .menu__content .menu-item:nth-of-type(5) a[href]:after {
-        background: #F6CAA1;
-    }
-    .menu__toggle:checked ~ .menu__content .menu-item:nth-of-type(6) {
-        border-color: #50CEA8;
-    }
-    .menu__toggle:checked ~ .menu__content .menu-item:nth-of-type(6) a[href]:after {
-        background: #50CEA8;
-    }
-    .menu__toggle:checked ~ .menu__content .menu-item:nth-of-type(7) {
-        border-color: #35B0C9;
-    }
-    .menu__toggle:checked ~ .menu__content .menu-item:nth-of-type(7) a[href]:after {
-        background: #35B0C9;
-    }
-    .menu__toggle:checked ~ .menu__content .menu-item:nth-of-type(8) {
-        border-color: #0794C5;
-    }
-    .menu__toggle:checked ~ .menu__content .menu-item:nth-of-type(8) a[href]:after {
-        background: #0794C5;
-    }
-    .menu__toggle:checked ~ .menu__content .menu-item:nth-of-type(9) {
-        border-color: #4658BC;
-    }
-    .menu__toggle:checked ~ .menu__content .menu-item:nth-of-type(9) a[href]:after {
-        background: #4658BC;
-    }
-    .menu__toggle:checked ~ .menu__content .menu-item:nth-of-type(10) {
-        border-color: #957DAD;
-    }
-    .menu__toggle:checked ~ .menu__content .menu-item:nth-of-type(10) a[href]:after {
-        background: #957DAD;
-    }
-    .menu__toggle:checked ~ .menu__content .menu-item:nth-of-type(11) {
-        border-color: #A86CAD;
-    }
-    .menu__toggle:checked ~ .menu__content .menu-item:nth-of-type(11) a[href]:after {
-        background: #A86CAD;
-    }
-    .menu__toggle:checked ~ .menu__content .menu-item:nth-of-type(12) {
-        border-color: #47377A;
-    }
-    .menu__toggle:checked ~ .menu__content .menu-item:nth-of-type(12) a[href]:after {
-        background: #47377A;
-    }
+            left: 0;
+            width: 100%;
+            height: 100px;
+            z-index: 3;
+            transition: 0.5s;
+            transition-delay: 0.5s;
+            overflow: hidden;
+        }
+        body input ~ nav > ul {
+            text-align: center;
+            position: absolute;
+            top: 35%;
+            left: 20%;
+            right: 20%;
+        }
+        body input ~ nav > ul > li {
+            opacity: 0;
+            transition: 0.5s;
+            transition-delay: 0s;
+        }
+        body input ~ nav > ul > li > a {
+            text-decoration: none;
+            color: #020304;
+            font-weight: 700;
+            font-family: sans-serif;
+            display: block;
+            padding: 30px;
+        }
+        body input:checked ~ nav {
+            height: 100%;
+            transition-delay: 0s;
+        }
+        body input:checked ~ nav > ul > li {
+            opacity: 1;
+            transition-delay: 0.5s;
+        }
+        li {
+            color: black;
 
-    /* Animation Delays */
-    .menu__toggle:checked ~ .menu__content .menu-item:nth-of-type(1) {
-        transition-delay: 0.200s, 0.950s;
-    }
-    .menu__toggle:checked ~ .menu__content .menu-item:nth-of-type(2) {
-        transition-delay: 0.250s, 0.950s;
-    }
-    .menu__toggle:checked ~ .menu__content .menu-item:nth-of-type(3) {
-        transition-delay: 0.300s, 0.950s;
-    }
-    /*.menu__toggle:checked ~ .menu__content .menu-item:nth-of-type(3) .menu-item:nth-of-type(1) {
-        transition-delay: 0.375s, 0.975s;
-    }
-    .menu__toggle:checked ~ .menu__content .menu-item:nth-of-type(3) .menu-item:nth-of-type(2) {
-        transition-delay: 0.425s, 0.975s;
-    }
-    .menu__toggle:checked ~ .menu__content .menu-item:nth-of-type(3) .menu-item:nth-of-type(3) {
-        transition-delay: 0.475s, 0.975s;
-    }*/
-    .menu__toggle:checked ~ .menu__content .menu-item:nth-of-type(4) {
-        transition-delay: 0.350s, 0.950s;
-    }
-    .menu__toggle:checked ~ .menu__content .menu-item:nth-of-type(5) {
-        transition-delay: 0.400s, 0.950s;
-    }
-    .menu__toggle:checked ~ .menu__content .menu-item:nth-of-type(6) {
-        transition-delay: 0.450s, 0.950s;
-    }
-    .menu__toggle:checked ~ .menu__content .menu-item:nth-of-type(7) {
-        transition-delay: 0.500s, 0.950s;
-    }
-    .menu__toggle:checked ~ .menu__content .menu-item:nth-of-type(7) .menu-item:nth-of-type(1) {
-        transition-delay: 0.550s, 0.950s;
-    }
-    .menu__toggle:checked ~ .menu__content .menu-item:nth-of-type(7) .menu-item:nth-of-type(2) {
-        transition-delay: 0.550s, 0.950s;
-    }
-    .menu__toggle:checked ~ .menu__content .menu-item:nth-of-type(7) .menu-item:nth-of-type(3) {
-        transition-delay: 0.550s, 0.950s;
-    }
-    .menu__toggle:checked ~ .menu__content .menu-item:nth-of-type(7) .menu-item:nth-of-type(4) {
-        transition-delay: 0.550s, 0.950s;
-    }
-    .menu__toggle:checked ~ .menu__content .menu-item:nth-of-type(8) {
-        transition-delay: 0.600s, 0.950s;
-    }
-    .menu__toggle:checked ~ .menu__content .menu-item:nth-of-type(9) {
-        transition-delay: 0.650s, 0.975s;
-    }
-    .menu__toggle:checked ~ .menu__content .menu-item:nth-of-type(10) {
-        transition-delay: 0.700s, 0.975s;
-    }
-    .menu__toggle:checked ~ .menu__content .menu-item:nth-of-type(11) {
-        transition-delay: 0.750s, 0.975s;
-    }
-    .menu__toggle:checked ~ .menu__content .menu-item:nth-of-type(12) {
-        transition-delay: 0.800s, 0.975s;
-    }
+        }
 
-    /* Formatting */
-    .menu__content > .menu-item {
-        border-left: 8px solid transparent;
-    }
-    .menu__content > .menu-item > a {
-        line-height: 44px;
-        min-width: 60px;
-    }
-    .sub-menu {
-        padding: 0 0 0 44px;
-    }
-    .menu-item {
-        line-height: 44px;
-        min-height: 44px;
-        padding: 0 12px;
-        transform: translateX(-100%);
-    }
-    .menu-item .menu-item {
-        transform: translateX(-150%);
-    }
+    </style>
 
-</style>
+    <body>
+        <h1>P2-Platypodes <span>Climate Change Statistics</span></h1>
 
-<body>
-<nav class="menu">
-    <input id ="menu__toggle" type="checkbox" class='menu__toggle'/>
-    <label for="menu__toggle" class="menu__toggle-label">
+        <input id="burger" type="checkbox" />
 
-        <svg preserveAspectRatio='xMinYMin' viewBox='0 0 24 24'>
-            <path d='M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z' />
-        </svg>
-        <svg preserveAspectRatio='xMinYMin' viewBox='0 0 24 24'>
-            <path d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z" />
-        </svg>
-    </label>
-    <ol class='menu__content'>
-        <li class="menu-item"><i class="fab fa-github"></i><a style="margin-left:0.5em" href="https://github.com/Ali-Saad/p2-platypodes3">GitHub Repository</a></li>
-        <li class="menu-item"><i class="fa fa-home"></i><a style="margin-left:0.5em" href="/">Home</a></li>
-        <li class="menu-item"><i class="fa fa-question-circle"></i><a style="margin-left:0.5em" href="/home2/">Huh?</a></li>
-        <li class="menu-item"><i class="fa fa-newspaper"></i><a style="margin-left:0.5em" href="/newspage/">News</a></li>
-        <li class="menu-item">
-            <i class="fa fa-info-circle"></i><a style="margin-left:0.5em" href="/info/">Information</a>
-            <ol class="sub-menu">
-                <li class="menu-item"><i class="fas fa-question"></i><a style="margin-left:0.5em" href="/FAQ/">FAQ</a></li>
-                <li class="menu-item"><i class="fas fa-head-side-mask"></i><a style="margin-left:0.5em" href="/prevention/">Prevention</a></li>
-                <li class="menu-item"><i class="fas fa-chart-line"></i><a style="margin-left:0.5em" href="/trends/">Trends</a></li>
-                <li class="menu-item"><i class="fas fa-globe"></i><a style="margin-left:0.5em" href="https://www.cdc.gov/coronavirus/2019-ncov/index.html">Learn More</a></li>
-            </ol>
-        </li>
-        <li class="menu-item"><i class="fa fa-map"></i><a style="margin-left:0.5em" href="/map/">COVID-19 Map</a></li>
-        <li class="menu-item">
-            <i class="fa fa-burn"></i><a style="margin-left:0.5em" href="#0">Hotspots</a>
-            <ol class="sub-menu">
-                <li class="menu-item"><i class="far fa-dot-circle"></i><a style="margin-left:0.5em" href="/california/">California</a></li>
-                <!--<li class="menu-item"><a href="/texas/">Texas</a></li>-->
-                <li class="menu-item"><i class="far fa-dot-circle"></i><a style="margin-left:0.5em" href="/newyork/">New York</a></li>
-                <!--<li class="menu-item"><a href="/florida/">Florida</a></li>-->
-            </ol>
-        </li>
-        <li class="menu-item"><i class="fa fa-users"></i><a style="margin-left:0.5em" href="/aboutus/">About Us</a></li>
-        <li class="menu-item"><i class="fa fa-comment-alt"></i><a style="margin-left:0.5em" href="/feedback/">Feedback</a></li>
-        <li class="menu-item"><i class="fa fa-sign-in-alt"></i><a style="margin-left:0.5em" href="/loginpage/">Login | Sign Up</a></li>
-        <li class="menu-item"><i class="fa fa-tachometer-alt"></i><a style="margin-left:0.5em" href="/dashboard/">User Dashboard</a></li>
-        <li class="menu-item"><i class="fa fa-id-card"></i><a style="margin-left:0.5em" href="/subscribe/">Subscribe</a></li>
-    </ol>
-</nav>
-</body>
+        <label for="burger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/">Link1</a></li>
+                <li><a href="/">Link2</a></li>
+
+            </ul>
+        </nav>
+    </body>
 
 <body>
 {% block content %}
