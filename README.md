@@ -19,6 +19,8 @@ To be added
 ## Run Instructions
 * Paste this link into your browser window or simply click on the link.
 * [Website](http://76.176.59.167/)
+* An alternate way to run the website is by obtaining the website code link by clicking on the green code button and copying the https link
+* paste that https link in your IDE (VCS) to access the contents of the site and run the wsgi file
 
 ## Git Instructions
 * You can learn about running this project on your IDE in this section:
