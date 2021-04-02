@@ -1,10 +1,88 @@
-<!DOCTYPE html>
-<html lang="en">
+
+
+{% block content %}
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Ayman's Mini-Labs</title>
 </head>
+
 <body>
-<h1>Ayman</h1>
+<h1>Ayman's Mini-Labs</h1>
+<div class="container">
+
+    <div class="center-block" style="margin: 2% 5% 5%; font-family: gilroy,serif;">
+        <!-- Title -->
+        <div class="col-12" style="text-align: center;">
+            <h1><strong>Fibonacci series in Python</strong></h1>
+        </div>
+
+        <!-- Input and Content -->
+        <div class="jumbotron text-center row">
+            <div class="col-md-6">
+                <h3>Type the nth number in the fibonacci sequence?</h3>
+                <img class="img-responsive py-3" src="" alt="" width="25%" height="Auto">
+                <form id="fibForm" action="" method="POST" >
+                    <input name="series" id="series" type="number" min="2" max="100" >
+                    <button>Go!</button>
+                </form>
+            </div>
+
+            <div class="col-md-6">
+                <h3>Fibonacci series for </h3>
+                <!-- Number, List table -->
+                <table class="mx-auto">
+                    <tr>
+                        <th scope="col">Number</th>
+                        <th scope="col">List</th>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <!-- Sequence -->
+        <div class="col-12" style="text-align: left; ">
+            <!-- Series -->
+            <h3>Fibonacci build up for series:  number: </h3>
+            <div class="overflow-auto" style="height: 200px">
+
+
+
+            </div>
+            <!-- Code -->
+            <script src="https://emgithub.com/embed.js?target=https%3A%2F%2Fgithub.com%2Fnighthawkcoders%2Fnighthawk_csp%2Fblob%2Fmaster%2Falgorithm%2Ffibonacci.py&style=github&showBorder=on&showLineNumbers=on&showFileMeta=on"></script>        </div>
+    </div>
+
+</div>
+</div>
+<style>
+    table, td, th {
+        border: 1px solid var(--dblue);
+    }
+    td, th {
+        text-align:left;
+    }
+    body {
+        background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+        background-size: 400% 400%;
+        animation: gradient 15s ease infinite;
+    }
+
+    @keyframes gradient {
+        0% {
+            background-position: 0% 50%;
+        }
+        50% {
+            background-position: 100% 50%;
+        }
+        100% {
+            background-position: 0% 50%;
+        }
+    }
+</style>
 </body>
 </html>
+{% endblock %}

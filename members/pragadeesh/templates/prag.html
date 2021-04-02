@@ -1,10 +1,72 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Pragadeesh</title>
-</head>
-<body>
-<h1>Pragadeesh</h1>
-</body>
-</html>
+{% extends "base.html" %}
+
+{% block head %} <!-- uses Jinja in the tab title to define our name -->
+<title> Pragadeesh's Blueprint </title>
+{% endblock %}
+
+{% block content %}
+    <header>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    </header>
+    <style>
+        table {
+            font-family: 'Arial';
+            margin: 200px auto;
+            border-collapse: collapse;
+            border: 1px solid #eee;
+            border-bottom: 2px solid #2f90d0;
+            box-shadow: 5px 10px 18px #5f5f5f;
+        }
+        table tr:hover {
+            background: #f4f4f4;
+        }
+        table tr:hover td {
+            color: #8199e0;
+        }
+        table th, table td {
+            color: #999;
+            border: 1px solid #eee;
+            padding: 20px 50px;
+            border-collapse: collapse;
+        }
+        table th {
+            background: #2f90d0;
+            color: #fff;
+            text-transform: uppercase;
+            font-size: 12px;
+        }
+        table th.last {
+            border-right: none;
+        }
+        a {
+            padding: 20px;
+        }
+    </style>
+    <a class="btn btn-info" role="button" href="/">Back to Home</a>
+    <table>
+        <thead>
+        <tr>
+            <th>Date</th>
+            <th>Name</th>
+            <th>Mini Lab</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>03/25/21</td>
+            <td>Fibonacci Algorithms</td>
+            <td><a href="/pragadeesh/pascal/">Link</a></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        </tbody>
+    </table>
+{% endblock %}
