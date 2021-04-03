@@ -44,6 +44,13 @@ To be added
 
 # Project Deliverable
 
+## 4/2 Minilab
+*Ali's Wow
+*Navodit's Wow
+*Pragadeesh's Wow
+*Ayman's Wow
+
+
 ## Sprint #1
 ### Week of 3-22 to 3-26
 #### Project Requirements
