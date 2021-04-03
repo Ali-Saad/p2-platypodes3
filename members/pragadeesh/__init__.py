@@ -16,4 +16,4 @@ def pragadeesh():
 def lab1():
     if request.form:
         return render_template("pascal.html", pascal=Pascal(int(request.form.get("row"))))
-    return render_template("pascal.html", pascal=Pascal(25))
+    return render_template("pascal.html", pascal=Pascal(11))
