@@ -58,11 +58,13 @@ To be added
 * [Individual Blueprint](https://github.com/Ali-Saad/p2-platypodes3/tree/master/members/pragadeesh)
 * Class with objects and other parameters created to manage a complex data set of pascal's values. [(Code)](https://github.com/Ali-Saad/p2-platypodes3/blob/master/members/pragadeesh/pascal.py#L5-L27)
 <img src = static/README/pr-class.png>  
+  
 * Data displayed in a web page by default with 11 rows (10th degree polynomial).
   * Input and button in the left corner to choose other order polynomials (other rows).
   * Data displayed in a triangle as the pascal's triangle should be
   * Code displayed at the bottom
 <img src = static/README/pr-page.png>  
+    
 * In this mini lab, there were many learning opportunities with lists and the prime usage of them as carriers of data. Lists were used to store data that would otherwise just be printed. It was interesting to see the various convoluted appends throughout the functions and classes to store the data and use POST to allow user interaction with the triangle.
 #### Ayman's Lab
 * [Individual section](https://github.com/Ali-Saad/p2-platypodes3/blob/master/members/ayman/__init__.py) (blueprint) in project for Mini Lab definition and execution. [Running page on website.](http://76.176.59.167/ayman/)
