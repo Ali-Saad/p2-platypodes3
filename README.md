@@ -45,10 +45,10 @@ To be added
 # Project Deliverable
 
 ## 4/2 Minilab
-*Ali's Wow
-*Navodit's Wow
-*Pragadeesh's Wow
-*Ayman's Wow
+* Ali's Wow
+* Navodit's Wow
+* Pragadeesh's Wow
+* Ayman's Wow
 
 
 ## Sprint #1
