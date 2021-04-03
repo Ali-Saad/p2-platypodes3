@@ -45,7 +45,7 @@ To be added
 # Project Deliverable
 
 ## 4/2 Minilab
-* Ali's Wow
+* Ali's Wow: The insight I gained while doing this project has to do with the getters. Because I did not utilize variables within my code, utilizing getters was very harder to do since I had no sort of user input section; my user input must be changed from within the python file itself. I also gained insight aobut how list.append works since I needed to brush up on that concept.
 * Navodit's Wow
 * Pragadeesh's Wow
 * Ayman's Wow
