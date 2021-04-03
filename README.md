@@ -63,9 +63,7 @@ To be added
   * Data displayed in a triangle as the pascal's triangle should be
   * Code displayed at the bottom
 <img src = static/README/pr-page.png>  
-* In this mini lab, there were many learning opportunities with lists and the prime usage of them as carriers of data. 
-Lists were used to store data that would otherwise just be printed. It was interesting to see the various convoluted appends 
-  throughout the functions and classes to store the data and use POST to allow user interaction with the triangle.
+* In this mini lab, there were many learning opportunities with lists and the prime usage of them as carriers of data. Lists were used to store data that would otherwise just be printed. It was interesting to see the various convoluted appends throughout the functions and classes to store the data and use POST to allow user interaction with the triangle.
 #### Ayman's Lab
 * [Individual section](https://github.com/Ali-Saad/p2-platypodes3/blob/master/members/ayman/__init__.py) (blueprint) in project for Mini Lab definition and execution. [Running page on website.](http://76.176.59.167/ayman/)
 * Defining a class to manage a complex data set and creating an object from a class in Python. [(Link to code)](https://github.com/Ali-Saad/p2-platypodes3/blob/master/members/ayman/lab1.py)
