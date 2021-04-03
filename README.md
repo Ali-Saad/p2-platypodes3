@@ -45,8 +45,8 @@ To be added
 ## Project Deliverable: Mini Lab
 ### Week of 3/29 - 4/2 
 #### Ali's Lab: 
-* Individual section (blueprint) in project for Mini Lab definition and execution.
-* Defining a class to manage a complex data set and creating an object from a class in Python. (insert image)
+* [Individual section](https://github.com/Ali-Saad/p2-platypodes3/blob/master/members/ali/__init__.py) (blueprint) in project for Mini Lab definition and execution.
+* Defining a class to manage a complex data set and creating an object from a class in Python. [(Link)](https://github.com/Ali-Saad/p2-platypodes3/blob/master/members/ali/Aliminilab.py)
 * Data displayed on a web page.
 * The insight I gained while doing this project has to do with the getters. Because I did not utilize variables within my code, utilizing getters was very harder to do since I had no sort of user input section; my user input must be changed from within the python file itself. I also gained insight about how list.append works since I needed to brush up on that concept.
 #### Navodit's Lab
@@ -60,10 +60,12 @@ To be added
 * Data displayed on a web page.
 * Wow
 #### Ayman's Lab
-* Individual section (blueprint) in project for Mini Lab definition and execution.
-* Defining a class to manage a complex data set and creating an object from a class in Python. (insert image)
-* Data displayed on a web page.
-* Wow
+* [Individual section](https://github.com/Ali-Saad/p2-platypodes3/blob/master/members/ayman/__init__.py) (blueprint) in project for Mini Lab definition and execution. [Running page on website.](http://76.176.59.167/ayman/)
+* Defining a class to manage a complex data set and creating an object from a class in Python. [(Link to code)](https://github.com/Ali-Saad/p2-platypodes3/blob/master/members/ayman/lab1.py)
+<img src = static/README/ak-class.png> 
+* Data displayed on a web page. [(Link to code)](https://github.com/Ali-Saad/p2-platypodes3/blob/master/members/ayman/templates/lab1.html)
+<img src = static/README/ak-page.png>
+* During this mini lab, I grasped the usage and practical application of a Python class and object. My mini lab focuses on mathematical operations, more specifically, factoring any number between 1 and 100,000.
 
 
 ## Sprint #1
