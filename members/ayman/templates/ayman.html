@@ -2,9 +2,8 @@
 
 {% block content %}
 <head>
-    <meta charset="UTF-8">
     <title>Ayman's Mini-Labs</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">-->
 </head>
 
 <style>
@@ -19,6 +18,12 @@
             background-position: 0% 50%;
         }
     }
+    html,
+    body,
+    header,
+    #main {
+        height: auto;
+    }
     body {
         background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
         background-size: 400% 400%;
@@ -27,18 +32,135 @@
     img{
         height: 100%;
         width: 100%;
+        margin-top: 10%;
+    }
+    table {
+        font-family: 'Arial';
+        margin: 200px auto;
+        border-collapse: collapse;
+        border: 1px solid #eee;
+        border-bottom: 1px solid #ffffff;
+        box-shadow: 5px 10px 18px #ffffff;
+    }
+    table tr:hover {
+        background: #f4f4f4;
+    }
+    table tr:hover td {
+        color: #8199e0;
+    }
+    table th, table td {
+        color: #999;
+        border: 1px solid #eee;
+        padding: 20px 50px;
+        border-collapse: collapse;
+    }
+    table th {
+        background: #4ca4b4;
+        color: #fff;
+        text-transform: uppercase;
+        font-size: 12px;
+    }
+    table th.last {
+        border-right: none;
+    }
+    a {
+        padding: 20px;
     }
 
+    tr:nth-child(even) {
+        background-color: #dddddd;
+    }
 </style>
 
 <body>
-<h1 style="color: white; text-align: center; font-family: Palatino; font-size: 45pt; font-weight: bold">Ayman's Mini Labs</h1>
+<!--<h1 style="color: white; text-align: center; font-family: Palatino; font-size: 45pt; font-weight: bold">Ayman's Mini Labs</h1>-->
 <div class="container">
     <img src="/static/bp_static/minilabcode.png" alt="Mini Labs" class="center">
 </div>
-<div>
 
+<!-- TEST -->
+
+<!--Main Page-->
+<div id="main" class="view">
+    <div class="mask rgba-black-strong">
+        <div class="container-fluid d-flex align-items-center justify-content-center h-100">
+            <div class="row d-flex justify-content-center text-center">
+                <div class="col-md-10">
+                    <!-- Heading -->
+                    <h2a style="color: white; font-family: Palatino; font-size: 45pt; font-weight: bold">Ayman's BluePrint</h2a>
+
+                    <br/>
+                    <br/>
+                    <!-- Description -->
+                    <h4a style="color: white; font-size: 17pt; font-family: Palatino" class="font-weight pt-4">Mini Labs, Tech Talk References, and MORE... </h4a>
+                    <br/>
+                    <br/>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
+
+
+
+
+
+<!--Layout-->
+<main class="mt-5">
+    <div class="container">
+        <!--Features Section-->
+        <section id="best-features" class="text-center">
+            <!-- Heading -->
+            <i style="color:#4ca4b4" class="far fa-file-code fa-10x"></i>
+            <h2 class="mb-5 font-weight-bold">Mini Labs</h2>
+            <!--Grid row-->
+            <div class="row d-flex justify-content-center mb-4">
+                <!--Grid column-->
+                <div class="col-md-8">
+                    <!-- Description -->
+                    <table>
+                        <tr>
+                            <th>Lab Type</th>
+                            <th>Date</th>
+                            <th>Page</th>
+                        </tr>
+                        <tr>
+                            <td>Classes and Objects</td>
+                            <td>4/2/21</td>
+                            <td><a href = /ayman/lab1/>Link</a></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </table>
+                </div>
+                <!--Grid column-->
+            </div>
+            <!--Grid row-->
+
+<!-- ENDTEST -->
 
 </body>
 </html>

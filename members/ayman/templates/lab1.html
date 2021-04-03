@@ -1,0 +1,18 @@
+{% block head %}
+    <title> Mini Lab 1 </title>
+{% endblock %}
+
+{% block content %}
+    <div>
+        <form id="factorForm" action="/ayman/lab1/" method="POST" >
+            <input name="list" id="list" type="number" min="1" max="100000" >
+            <button>Go!</button>
+        </form>
+        <div class="col-12" style="text-align: center; ">
+            <!-- Series -->
+            {% for factor in list.list %}
+                <h3>{{factor}}</h3>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}
