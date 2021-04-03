@@ -52,7 +52,7 @@ To be added
 * The insight I gained while doing this project has to do with the getters. Because I did not utilize variables within my code, utilizing getters was very harder to do since I had no sort of user input section; my user input must be changed from within the python file itself. I also gained insight about how list.append works since I needed to brush up on that concept.
 
 #### Navodit's Lab
-* [Mini Lab on Website](http://76.176.59.167/navodit/pythagorean/)
+* [Mini Lab on Website](http://76.176.59.167/navodit/pythagorean)
 * [Individual section](https://github.com/Ali-Saad/p2-platypodes3/tree/master/members/navodit) in project for Mini Lab definition and execution.
 * Defining a class to manage a complex data set and creating an object from a class in Python. [link](https://github.com/Ali-Saad/p2-platypodes3/blob/master/members/navodit/CRtTrig.py)
 * Data displayed on a web page. 
