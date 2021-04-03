@@ -1,11 +1,19 @@
+
 {% block head %}
 <title> Pascal's Triangle </title>
 {% endblock %}
 
 {% block content %}
-<div class="col-12" style="text-align: left; ">
-    <!-- Series -->
-    <h3>Pascal build up for row:  </h3>
-    <!-- Code -->
-</div>
+    <div>
+        <form id="pascalForm" action="/pragadeesh/pascal/" method="POST" >
+            <input name="row" id="row" type="number" min="1" max="25" >
+            <button>Go!</button>
+        </form>
+        <div class="col-12" style="text-align: center; ">
+            <!-- Series -->
+            {% for row in pascal.pascal %}
+            <h3>{{row}}</h3>
+            {% endfor %}
+        </div>
+    </div>
 {% endblock %}
