@@ -80,10 +80,13 @@ To be added
 * [Mini Lab on Website](http://76.176.59.167/ayman/lab1/)
 * [Individual section](https://github.com/Ali-Saad/p2-platypodes3/blob/master/members/ayman/__init__.py) (blueprint) in project for Mini Lab definition and execution. [Running page on website.](http://76.176.59.167/ayman/)
 * Defining a class to manage a complex data set and creating an object from a class in Python. [(Link to code)](https://github.com/Ali-Saad/p2-platypodes3/blob/master/members/ayman/lab1.py)
-* Data displayed on a web page. [(Link to code)](https://github.com/Ali-Saad/p2-platypodes3/blob/master/members/ayman/templates/lab1.html)
-* During this mini lab, I grasped the usage and practical application of a Python class and object. My mini lab focuses on mathematical operations, more specifically, factoring any number between 1 and 100,000.
 <img src = static/README/ak-class.png> 
+
+* Data displayed on a web page. [(Link to code)](https://github.com/Ali-Saad/p2-platypodes3/blob/master/members/ayman/templates/lab1.html)
 <img src = static/README/ak-page2.png>
+
+* Wow
+   * During this mini lab, I grasped the usage and practical application of a Python class and object. My mini lab focuses on mathematical operations, more specifically, factoring any number between 1 and 100,000.
 
 
 ## Sprint #1
