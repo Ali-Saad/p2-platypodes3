@@ -57,8 +57,10 @@ To be added
 * Defining a class to manage a complex data set and creating an object from a class in Python. [link](https://github.com/Ali-Saad/p2-platypodes3/blob/master/members/navodit/CRtTrig.py)
 * Data displayed on a web page. 
 <img src = static/README/nm-page.png> 
+
 * Wow
-    * I learned to use some JavaScript while working on this project. I still don't understand it completely but I understand it way more than before. I used the Javascripts to see which fields were filled so I could perform the pythagorean theorem with the right variables. The empty fields are set to null or empty. I also made the triangle with javascript in hopes of having a triangle that changes dimentions as values are added but that was not acheivable this week. [Link](https://github.com/Ali-Saad/p2-platypodes3/blob/master/members/navodit/templates/Pythagorean.html#L125)
+    * I learned to use some JavaScript while working on this project. I still don't understand it completely but I understand it way more than before. I used the Javascripts to see which fields were filled so I could perform the pythagorean theorem with the right variables. The empty fields are set to null or empty. I also made the triangle with javascript in hopes of having a triangle that changes dimentions as values are added but that was not acheivable this week. 
+[Link](https://github.com/Ali-Saad/p2-platypodes3/blob/master/members/navodit/templates/Pythagorean.html#L125)
 
 #### Pragadeesh's Lab (Score: 5/5)
 * [Mini Lab on Website](http://76.176.59.167/pragadeesh/pascal/)
