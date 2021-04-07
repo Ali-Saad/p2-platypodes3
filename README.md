@@ -42,13 +42,52 @@ To be added
 
 ---
 
-# Project Deliverable
+## Project Deliverable: Mini Lab
+### Week of 3/29 - 4/2 
+#### Ali's Lab:  (Score: 4/5)
+* [Mini Lab on Website](http://76.176.59.167/ali/)
+* [Individual section](https://github.com/Ali-Saad/p2-platypodes3/blob/master/members/ali/__init__.py) (blueprint) in project for Mini Lab definition and execution.
+* Defining a class to manage a complex data set and creating an object from a class in Python. [(Link)](https://github.com/Ali-Saad/p2-platypodes3/blob/master/members/ali/Aliminilab.py)
+* Data displayed on a web page.
+* The insight I gained while doing this project has to do with the getters. Because I did not utilize variables within my code, utilizing getters was very harder to do since I had no sort of user input section; my user input must be changed from within the python file itself. I also gained insight about how list.append works since I needed to brush up on that concept.
 
-## 4/2 Minilab
-* Ali's Wow: The insight I gained while doing this project has to do with the getters. Because I did not utilize variables within my code, utilizing getters was very harder to do since I had no sort of user input section; my user input must be changed from within the python file itself. I also gained insight about how list.append works since I needed to brush up on that concept.
-* Navodit's Wow
-* Pragadeesh's Wow
-* Ayman's Wow
+#### Navodit's Lab (Score: 5/5)
+* [Mini Lab on Website](http://76.176.59.167/navodit/pythagorean)
+* [Individual section](https://github.com/Ali-Saad/p2-platypodes3/tree/master/members/navodit) in project for Mini Lab definition and execution.
+* Defining a class to manage a complex data set and creating an object from a class in Python. [link](https://github.com/Ali-Saad/p2-platypodes3/blob/master/members/navodit/CRtTrig.py)
+* Data displayed on a web page. 
+<img src = static/README/nm-page.png> 
+
+* Wow
+    * I learned to use some JavaScript while working on this project. I still don't understand it completely but I understand it way more than before. I used the Javascripts to see which fields were filled so I could perform the pythagorean theorem with the right variables. The empty fields are set to null or empty. I also made the triangle with javascript in hopes of having a triangle that changes dimentions as values are added but that was not acheivable this week. 
+[Link](https://github.com/Ali-Saad/p2-platypodes3/blob/master/members/navodit/templates/Pythagorean.html#L125)
+
+
+#### Pragadeesh's Lab (Score: 5/5)
+* [Mini Lab on Website](http://76.176.59.167/pragadeesh/pascal/)
+* [Individual Blueprint](https://github.com/Ali-Saad/p2-platypodes3/tree/master/members/pragadeesh)
+* Class with objects and other parameters created to manage a complex data set of pascal's values. [(Code)](https://github.com/Ali-Saad/p2-platypodes3/blob/master/members/pragadeesh/pascal.py#L5-L27)
+<img src = static/README/pr-class.png>  
+  
+* Data displayed in a web page by default with 11 rows (10th degree polynomial).
+  * Input and button in the left corner to choose other order polynomials (other rows).
+  * Data displayed in a triangle as the pascal's triangle should be
+  * Code displayed at the bottom
+<img src = static/README/pr-page.png>  
+    
+* In this mini lab, there were many learning opportunities with lists and the prime usage of them as carriers of data. Lists were used to store data that would otherwise just be printed. It was interesting to see the various convoluted appends throughout the functions and classes to store the data and use POST to allow user interaction with the triangle.
+
+#### Ayman's Lab (Score: 5/5)
+* [Mini Lab on Website](http://76.176.59.167/ayman/lab1/)
+* [Individual section](https://github.com/Ali-Saad/p2-platypodes3/blob/master/members/ayman/__init__.py) (blueprint) in project for Mini Lab definition and execution. [Running page on website.](http://76.176.59.167/ayman/)
+* Defining a class to manage a complex data set and creating an object from a class in Python. [(Link to code)](https://github.com/Ali-Saad/p2-platypodes3/blob/master/members/ayman/lab1.py)
+<img src = static/README/ak-class.png> 
+
+* Data displayed on a web page. [(Link to code)](https://github.com/Ali-Saad/p2-platypodes3/blob/master/members/ayman/templates/lab1.html)
+<img src = static/README/ak-page2.png>
+
+* Wow
+   * During this mini lab, I grasped the usage and practical application of a Python class and object. My mini lab focuses on mathematical operations, more specifically, factoring any number between 1 and 100,000.
 
 
 ## Sprint #1

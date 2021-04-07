@@ -7,10 +7,18 @@
 <body>
 <h1>Ali</h1>
 <h2>Ali's Mini-Lab</h2>
-<iframe height="1200px" width="100%" src="https://replit.com/@AliSaad1/shrimpy?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+<div>
+    <form id="factorialform" action="/ali/Aliminilab/" method="POST" >
+        <input style="margin-left: 20px" class="col-1" name="row" id="row" type="number" min="1" max="20" >
+        <button class="button_cont">Derive</button>
+    </form>
+    <h4 style="font-size: 20px; text-align: center; font-family: Times">Please select values.</h4>
+    <div class="col-12" style="text-align: center; font-size: 2pt; font-family: Times ">
+        </br>
+        <!-- Series -->
+    </div>
+    <h3>{{minilab.output}}</h3>
+    <h4>{{minilab.work}}</h4>
+</div>
 </body>
-<div class="container">
-    <div class="card">
-        <div class="card-body">
-            {{fact1}}
 </html>

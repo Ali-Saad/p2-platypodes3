@@ -1,11 +1,85 @@
+{% extends "base.html" %}
+
 {% block head %}
 <title> Pascal's Triangle </title>
 {% endblock %}
 
 {% block content %}
-<div class="col-12" style="text-align: left; ">
-    <!-- Series -->
-    <h3>Pascal build up for row:  </h3>
-    <!-- Code -->
+<head>
+    <style>
+        input 				{
+            font-size:18px;
+            padding:10px 10px 10px 5px;
+            display:block;
+            width:300px;
+            border:none;
+            border-bottom:1px solid #757575;
+            border-radius: 10px;
+        }
+
+        input:focus 		{ outline:none; }
+
+
+
+        button{
+            display:inline-block;
+            padding:0.3em 1.2em;
+            border:0.16em solid rgba(255,255,255,0);
+            border-radius:2em;
+            box-sizing: border-box;
+            text-decoration:none;
+            font-family:'Roboto',sans-serif;
+            font-weight:300;
+            color: #292929;
+            text-shadow: 0 0.04em 0.04em rgba(0,0,0,0.35);
+            text-align:center;
+            transition: all 0.2s;
+            margin: 15px 0.1em 0.1em 35px;
+        }
+
+        button:hover{
+            border-color: #222222;
+        }
+
+        @media all and (max-width:30em){
+            button{
+                display:block;
+                margin:0.2em auto;
+                }
+        }
+    </style>
+</head>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+    <body style="background: linear-gradient(to right,#2db8d2, #47cbe5, #66cce3);">
+
+    </body>
+    <div>
+        <form id="pascalForm" action="/pragadeesh/pascal/" method="POST" >
+            <input style="margin-left: 20px" class="col-1" name="row" id="row" type="number" min="1" max="20" >
+            <button class="button_cont">Derive</button>
+        </form>
+        <h4 style="font-size: 20px; text-align: center; font-family: Times">Please select values up to 20 rows. The 20th row will provide binomial coefficients for the 19th power.</h4>
+        <div class="col-12" style="text-align: center; font-size: 2pt; font-family: Times ">
+            </br>
+            <!-- Series -->
+            {% for row in pascal.pascal %}
+            <h3>{{row}}</h3>
+            {% endfor %}
+        </div>
+    </div>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+<div>
+    <h3 style="font-size: 25px; text-align: center; font-family: Times">pascal.py</h3>
+    <script style="margin: 20px 20px 20px 20px; " src="https://gist.github.com/PragadeeshRaj/ff4703e818d529a057c81757f34f2096.js"></script>
 </div>
 {% endblock %}
