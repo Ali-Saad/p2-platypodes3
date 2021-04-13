@@ -31,3 +31,7 @@ def about_route():
 def lock_route():
     return render_template("lock.html", model=model.setup())
 
+@app.route('/info/')
+def info_route():
+    return render_template("information.html", model=model.setup())
+
