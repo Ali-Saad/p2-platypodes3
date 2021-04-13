@@ -2,7 +2,7 @@
 {% extends "base.html" %}
 
 {% block head %} <!-- uses Jinja in the tab title to define our name -->
-<title> {{name}} | Home </title>
+<title> Platypodes | Home </title>
 {% endblock %}
 
 {% block content %}
@@ -38,9 +38,25 @@
         .btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited{
             background-color: #fbaf44 !important;
         }
-        /* Clock Styling */
+        /* Footer Styling */
+        #button-addon1 {
+            color: #ffc371;
+        }
 
-        /* End Clock Styling */
+        i {
+            color: #ffc371;
+        }
+
+        .form-control::placeholder {
+            font-size: 0.95rem;
+            color: #aaa;
+            font-style: italic;
+        }
+
+        .form-control.shadow-0:focus {
+            box-shadow: none;
+        }
+        /* End Footer Styling */
     </style>
 </head>
 <header>
@@ -261,6 +277,68 @@
         <hr class="my-5">-->
 
     </div>
+
+    <!-- Footer -->
+    <footer class="bg-white">
+        <div class="container py-5">
+            <div class="row py-4">
+                <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
+                    <h5 class="text-uppercase font-weight-bold mb-4">P2-Platyodes</h5>
+                    <img src="https://swaylocks7stage.s3.us-east-2.amazonaws.com/s3fs-public/NEW%20PLATYPUS%20LOGO.jpg" alt="" width="180" class="mb-3">
+                    <p class="font-italic text-muted">We are a group of aspiring students working to create, design, and complete
+                        a website storing essential global warming data for users to easily access and be informed at all times.  </p>
+                    <ul class="list-inline mt-4">
+                        <li class="list-inline-item"><a href="https://slack.com/" target="_blank" title="Slack"><i class="fab fa-slack fa-2x"></i></a></li>
+                        <li class="list-inline-item"><a href="https://discord.com/?utm_source=google&utm_medium=advertising&utm_campaign=2020-01_google-us-registrations-brand_broad&utm_term=ENG-Text-Chat-Desktop-NA-All-All-All&utm_content=--t%3Apa&gclid=EAIaIQobChMI6M_G97H87wIVYRh9Ch12Gg1wEAAYASAAEgL0xvD_BwE" target="_blank" title="Discord"><i class="fab fa-discord fa-2x"></i></a></li>
+                        <li class="list-inline-item"><a href="#" target="_blank" title="Instagram"><i class="fab fa-instagram fa-2x"></i></a></li>
+                        <li class="list-inline-item"><a href="https://github.com/Ali-Saad/p2-platypodes3" target="_blank" title="GitHub"><i class="fab fa-github fa-2x"></i></a></li>
+                        <li class="list-inline-item"><a href="#" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in fa-2x"></i></a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
+                    <h6 class="text-uppercase font-weight-bold mb-4">Statistics</h6>
+                    <ul class="list-unstyled mb-0">
+                        <li class="mb-2"><a href="#" class="text-muted">Scraped Data</a></li>
+                        <li class="mb-2"><a href="#" class="text-muted">World Map</a></li>
+                        <li class="mb-2"><a href="/info" class="text-muted">Information</a></li>
+                        <li class="mb-2"><a href="#" class="text-muted">Hotspots</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
+                    <h6 class="text-uppercase font-weight-bold mb-4">About Us</h6>
+                    <ul class="list-unstyled mb-0">
+                        <li class="mb-2"><a href="#" class="text-muted">Login</a></li>
+                        <li class="mb-2"><a href="#" class="text-muted">Register</a></li>
+                        <li class="mb-2"><a href="#" class="text-muted">Blueprints</a></li>
+                        <li class="mb-2"><a href="#" class="text-muted">Meet the Team</a></li>
+                        <li class="mb-2"><a href="#" class="text-muted">TOS and Privacy</a></li>
+                        <li class="mb-2"><a href="#" class="text-muted">Feedback</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-lg-0">
+                    <h6 class="text-uppercase font-weight-bold mb-4">Subscribe. Stay Updated.</h6>
+                    <p class="text-muted mb-4">Our newsletter brings you the latest information. Please enter your email.</p>
+                    <div class="p-1 rounded border">
+                        <div class="input-group">
+                            <input type="email" placeholder="Enter your email address" aria-describedby="button-addon1" class="form-control border-0 shadow-0">
+                            <div class="input-group-append">
+                                <button id="button-addon1" type="submit" class="btn btn-link"><i class="fa fa-paper-plane"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Copyrights -->
+        <div class="bg-light py-4">
+            <div class="container text-center">
+                <p class="text-muted mb-0 py-2">© 2021 Platypodes All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <!-- End footer -->
+
 </main>
 <!--Main layout-->
 {% endblock %}
