@@ -1,0 +1,172 @@
+{% extends "base.html" %}
+{% block head %}
+    <title> Extra Information </title>
+    <!--<link rel = "stylesheet" type = "text/css" href = "/templates/ stylesheets/ info.css"/>-->
+{% endblock %}
+
+{% block content %}
+
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Sura:wght@400;700&display=swap");
+
+        :root {
+            --src: url(https://images.unsplash.com/photo-1554620121-59e7f3f6e3a4?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy);
+            --size: 60vmin;
+            --space: 8vmin;
+            --duration: 300ms;
+            --ease-out: cubic-bezier(0.25, 1, 0.5, 1);
+            --bounce-out: cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            display: grid;
+            place-items: center;
+            grid-gap: var(--space);
+            margin: 0 auto;
+            padding: var(--space);
+            font-family: "Sura", sans-serif;
+            color: white;
+            background-color: rgb(29, 30, 34);
+        }
+
+        .promo {
+            position: relative;
+            cursor: pointer;
+            width: var(--size);
+            height: var(--size);
+        }
+
+        .title {
+            --font-size: calc(var(--size) / 8);
+
+            display: flex;
+            align-items: center;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            font-size: var(--font-size);
+            font-weight: 700;
+            line-height: 1.2;
+            white-space: nowrap;
+            transform: translate(-10%, -50%);
+            transition: transform var(--duration) var(--ease-out);
+            pointer-events: none;
+        }
+
+        .title::after {
+            content: attr(data-cta);
+            display: inline-block;
+            margin-left: 1.5vmin;
+            font-size: calc(var(--font-size) / 3.25);
+            font-weight: 400;
+            letter-spacing: 0.125vmin;
+            opacity: 0;
+            transform: translateX(-25%);
+            transition: transform var(--duration) var(--ease-out),
+            opacity var(--duration) var(--ease-out);
+        }
+
+        .image-wrapper {
+            width: var(--size);
+            height: var(--size);
+            overflow: hidden;
+            clip-path: polygon(100% 0, 100% 50%, 100% 100%, 0% 100%, 0 50%, 0% 0%);
+            transition: transform var(--duration) var(--ease-out),
+            clip-path var(--duration) var(--ease-out);
+        }
+
+        .image-wrapper img {
+            position: relative;
+            width: 120%;
+            height: 100%;
+            object-fit: cover;
+            transform: translateX(-10%);
+            transition: transform var(--duration) var(--ease-out);
+        }
+
+        .image-wrapper::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: var(--overlay-color);
+            mix-blend-mode: multiply;
+            opacity: 0;
+            transform: translateZ(0);
+            transition: opacity var(--duration) var(--ease-out);
+        }
+
+        .promo:hover img {
+            transform: translateX(0);
+        }
+
+        .promo:hover .image-wrapper {
+            clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
+            transform: translateX(25%);
+            transition-timing-function: var(--bounce-out);
+        }
+
+        .promo:hover .title {
+            transform: translate(5%, -50%);
+            transition-timing-function: var(--bounce-out);
+        }
+
+        .promo:hover .title::after {
+            opacity: 1;
+            transform: translateX(0);
+            transition-timing-function: var(--bounce-out);
+        }
+
+        .promo:hover .image-wrapper::after {
+            opacity: 1;
+        }
+    </style>
+
+    <body>
+    <a href = "/FAQ/">
+        <div class="promo" style="--overlay-color: hotpink">
+            <div class="image-wrapper" >
+                <img src="https://images.unsplash.com/photo-1554620121-59e7f3f6e3a4?ixlib=rb-1.2.1&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=800&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjE0NTg5fQ " />
+            </div>
+            <h2 style="color:white" class="title" data-cta="Learn some stuff →">Some FAQ</h2>
+        </div>
+    </a>
+
+    <a href = "/prevention/">
+        <div class="promo" style="--overlay-color: yellow">
+            <!-- -->
+            <div class="image-wrapper">
+                <img src="https://images.unsplash.com/photo-1523806762236-1d3a6b7eb3fd?ixlib=rb-1.2.1&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=800&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjE0NTg5fQ"/>
+            </div>
+            <h2 style="color:white" class="title" data-cta="Go eco →">Prevention Tips</h2>
+        </div>
+    </a>
+
+    <a href = "/trends/">
+        <div class="promo" style="--overlay-color: #C83E77">
+            <!--https://images.unsplash.com/photo-1548008116-bcfec1f4c812?ixlib=rb-1.2.1&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=800&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjE0NTg5fQ -->
+            <div class="image-wrapper">
+                <img src="https://live.staticflickr.com/5484/12004131706_2c0f366685_b.jpg"/>
+            </div>
+            <h2 style="color:white" class="title" data-cta="Smoky... →">Trends & Patterns</h2>
+        </div>
+    </a>
+
+    <a href = "https://www.nrdc.org/stories/global-warming-101">
+        <div class="promo" style="--overlay-color: #D291BC">
+            <!--https://images.unsplash.com/photo-1569335048491-5fb94951e885?ixlib=rb-1.2.1&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=800&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjE0NTg5fQ -->
+            <div class="image-wrapper">
+                <img src="https://static.scientificamerican.com/sciam/cache/file/66865348-D82E-4938-BC9214985A3D402F_source.png"/>
+            </div>
+            <h2 style="color:white" class="title" data-cta="More knowledge awaits →">Learn More</h2>
+        </div>
+    </a>
+
+    </body>
+{% endblock %}
