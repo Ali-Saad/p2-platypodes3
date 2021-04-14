@@ -35,3 +35,15 @@ def lock_route():
 def info_route():
     return render_template("information.html", model=model.setup())
 
+@app.route('/info/faq/')
+def faq_route():
+    return render_template("faq.html", model=model.setup())
+
+@app.route('/info/prevention/')
+def prevent_route():
+    return render_template("prevention.html", model=model.setup())
+
+@app.route('/info/trends/')
+def trends_route():
+    return render_template("trends.html", model=model.setup())
+
