@@ -1,6 +1,11 @@
-from flask import Flask
+from flask import Flask, render_template, request
 import model
-from flask import render_template
+import sqlite3 as sl3
+
+#import stats
+import storefb
+#import storesignup
+# import storelogin
 from members.navodit import members_navodit_bp
 from members.pragadeesh import members_pragadeesh_bp
 from members.ayman import members_ayman_bp
@@ -8,29 +13,33 @@ from members.ali import members_ali_bp
 from members.mustafa import members_mustafa_bp
 #import sqlite3 as sl3
 
+# Blueprints
 app = Flask(__name__)
 app.register_blueprint(members_navodit_bp, url_prefix='/navodit')
 app.register_blueprint(members_pragadeesh_bp, url_prefix='/pragadeesh')
 app.register_blueprint(members_ali_bp, url_prefix='/ali')
 app.register_blueprint(members_ayman_bp, url_prefix='/ayman')
 app.register_blueprint(members_mustafa_bp, url_prefix='/mustafa')
+@app.route('/blueprint/')
+def blue_route():
+    return render_template("blueprint.html", model=model.setup())
 
+# main home pages
 @app.route('/')  # app routes to various html pages that we have assigned it to
 def home_route():
     return render_template("home.html", model=model.setup())
-
-@app.route('/subscribe/')
-def sub_route():
-    return render_template("subscribe.html", model=model.setup())
 
 @app.route('/aboutus/')
 def about_route():
     return render_template("aboutus.html", model=model.setup())
 
+
+# lock screen test
 @app.route('/lock/')
 def lock_route():
     return render_template("lock.html", model=model.setup())
 
+# info app routes
 @app.route('/info/')
 def info_route():
     return render_template("information.html", model=model.setup())
@@ -47,3 +56,36 @@ def prevent_route():
 def trends_route():
     return render_template("trends.html", model=model.setup())
 
+@app.route('/login/')
+def login_route():
+    return render_template("login.html", model=model.setup())
+
+@app.route('/register/')
+def register_route():
+    return render_template("register.html", model=model.setup())
+
+@app.route('/feedback/')
+def fb_route():
+    return render_template("feedback.html", model=model.setup())
+
+@app.route('/feedback_form', methods=['POST'])
+def feedback_form():
+    fname = request.form['firstname']
+    lname = request.form['lastname']
+    mailid = request.form['email']
+    service = request.form['type']
+    opinion = request.form['feedback']
+    storefb.insertfeedback(fname, lname, mailid, service, opinion)
+    '''
+    print (fname)
+    print (lname)
+    print (mailid)
+    print(service)
+    print(opinion)
+    '''
+
+    return render_template("misc/confirmation.html", model=model.setup())
+
+@app.route('/tosandp/')
+def ts_route():
+    return render_template("misc/tos&p.html", model=model.setup())

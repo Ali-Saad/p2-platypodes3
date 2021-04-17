@@ -1,0 +1,61 @@
+<html>
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    {% block head %}
+    {% endblock %}
+</head>
+
+<style>
+    body {
+        background: linear-gradient(to right, #0062E6, #33AEFF);
+    }
+    .card{
+        width:400px;
+        height:400px;
+        background:#ffffff;
+        border-radius:8px;
+        box-shadow:0 0 10px -5px #000;
+        margin:calc(50vh - 220px) auto;
+        padding:20px 30px;
+        max-width:calc(100vw - 40px);
+        box-sizing:border-box;
+        position:relative
+    }
+
+    button{
+        width:335px;
+        padding:8px 12px;
+        margin:8px 0 0;
+        border:2px solid #4ca4b4;
+        border-radius:8px;
+        background:0;
+        color:#4ca4b4;
+        cursor:pointer;
+        transition:all .3s
+    }
+
+    button:hover{
+        background:#4ca4b4;
+        color:#ffffff
+    }
+
+    h3{
+        margin:10px 0;
+        padding-bottom:10px;
+        width:335px;
+        color:#78788c;
+        border-bottom:3px solid
+    }
+</style>
+
+<body>
+<card class="card">
+    <h3 style="text-align: center; color: #78788c; font-family: Palatino">Your response has been recorded! Thank you, the feedback means a lot to us.</h3>
+    <h4 style="color: #ffffff">~</h4>
+    <a href="/"><button>Return Home</button></a>
+    <h4 style="color: #ffffff">~</h4>
+    <a href="/feedback/"><button>Submit Another Response</button></a>
+</card>
+</body>
+</html>
