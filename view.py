@@ -89,3 +89,7 @@ def feedback_form():
 @app.route('/tosandp/')
 def ts_route():
     return render_template("misc/tos&p.html", model=model.setup())
+
+@app.route('/cookies/')
+def jar_route():
+    return render_template("misc/cookies.html", model=model.setup())
