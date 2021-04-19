@@ -84,10 +84,12 @@
     <div class="leftpane">
         <h1>Enter values of atleast 2 sides</h1>
         <canvas id="myCanvas" width="500" height="500"></canvas>
-        <input type="text" id="side1" onfocusout="checkValues()" placeholder= "side1" />
-        <input type="text" id="side2" onfocusout="checkValues()" placeholder = "side2"/>
-        <input type="text" id="hypo" onfocusout="checkValues()" placeholder = "hypo"  />
-
+        <input type="text" id="side1"  placeholder= "side1" />
+        <input type="text" id="side2"  placeholder = "side2"/>
+        <input type="text" id="hypo"  placeholder = "hypo"  />
+        <button onclick="ClearBox()" id="btnAdd" type="button">Add New Triangle</button>
+        <button onclick="ListSort()" id="btnSort" type="button">Get Sorted List</button>
+        <button onclick="checkValues()" id="btnSub" type="button">Submit</button>
 </div>
     <div class="righttoppane">
         <h1>Request</h1>
@@ -157,8 +159,29 @@
 
     }
 
+    function ClearBox()
+    {
+        document.getElementById("side1").value =  ""
+        document.getElementById("side2").value =  ""
+        document.getElementById("hypo").value =  ""
 
+    }
 
+    function ListSort()
+    {
+        req = "POST /navodit/sorttriangles"
+        document.getElementById("requestStr").innerHTML =  req
+        let request = new XMLHttpRequest();
+        request.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                console.log(this.responseText)
+                document.getElementById("responseStr").innerHTML = this.responseText
+            }
+        }
+        request.open("POST", "/navodit/sorttriangles");
+        request.send();
+
+    }
 </script>
 
 </body>

@@ -9,6 +9,7 @@ class RtTrig:
         self.__side1 = 0
         self.__side2 = 0
         self.__hypo = 0
+        self.__area = 0
 
     # Getter for Side1
     def get_side1(self):
@@ -27,12 +28,14 @@ class RtTrig:
         self.__side1 = val1
         self.__side2 = val2
         self.__hypo = round(math.sqrt(self.__side1 ** 2 + self.__side2 ** 2), 2)
+        self.__area = self.get_area();
 
     # sets values for Side and Hypo and calculate side
     def set_sideAndHypo(self, val2, hypo):
         self.__side2 = val2
         self.__hypo = hypo
         self.__side1 = round(math.sqrt(self.__hypo ** 2 - self.__side2 ** 2), 2)
+        self.__area = self.get_area();
 
     def isRTValid(self):
         if self.__side1 == 0 or self.__side2 == 0 or self.__hypo == 0:

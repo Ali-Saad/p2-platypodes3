@@ -20,6 +20,15 @@ def submitSides():
     side1 = float(request.args.get("side1"))
     side2 = float(request.args.get("side2"))
     hypo = float(request.args.get("hypo"))
+
     jsonStr = tri.calculateSides(side1, side2, hypo)
+    print(jsonStr)
+    return jsonStr
+
+@members_navodit_bp.route('/sorttriangles', methods=['POST'])
+def sorttriangles():
+
+
+    jsonStr = tri.getSortedList()
     print(jsonStr)
     return jsonStr
