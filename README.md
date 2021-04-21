@@ -7,7 +7,7 @@
 
 Table of Contents
 ---
-To be added
+To be Added
 
 # Members and Roles
 
@@ -21,7 +21,7 @@ To be added
 * [Website](http://76.176.59.167/)
 * An alternate way to run the website is by obtaining the website code link by clicking on the green code button and copying the https link
 * paste that https link in your IDE (VCS) to access the contents of the site and run the wsgi file
-
+ 
 ## Git Instructions
 * You can learn about running this project on your IDE in this section:
 * Go to Code home and click on the green "Code" button.
@@ -85,14 +85,14 @@ To be added
 
 * Data displayed on a web page. [(Link to code)](https://github.com/Ali-Saad/p2-platypodes3/blob/master/members/ayman/templates/lab1.html)
 <img src = static/README/ak-page2.png>
-
-* Wow
+  
+* Wow 
    * During this mini lab, I grasped the usage and practical application of a Python class and object. My mini lab focuses on mathematical operations, more specifically, factoring any number between 1 and 100,000.
-
-
-## Sprint #1
+  
+ 
+## Sprint #1 
 ### Week of 3-22 to 3-26
-#### Project Requirements
+#### Project Requirements 
 * [Completed Project Proposal Plan](https://docs.google.com/document/d/1WiLKD5fP7Oe071z8CqxkvvPjEyE1B9LVec0BJHgc2zc/edit?usp=sharing) (includes SMART goals)
 * The Project Plan outlines continous goals for our group members to work on throughout the trimester.
 * [Blueprints set up to support individual work](https://github.com/Ali-Saad/p2-platypodes3/tree/master/members)
@@ -101,10 +101,12 @@ To be added
 * See the link above or click [here](https://github.com/Ali-Saad/p2-platypodes3/projects/1) to access the scrum board.
 * Click [here](https://github.com/Ali-Saad/p2-platypodes3/blob/master/view.py#L4-L14) to see BluePrints in place in version control.
 * [GitHub commits](https://github.com/Ali-Saad/p2-platypodes3/commits/master) toward each members "In Progress" ticket.
-### See the new website [here](http://76.176.59.167/)
+### See the new website [here](http://76.176.59.167/) 
 ---
 
 # Project Log
+* April 20 2021
+  * Dark mode added to the information page, dark mode is soon to come for all other pages   
 * March 26 2021
   * Created Blueprints to organize code and reduce conflict
 * March 22 2021
@@ -113,3 +115,7 @@ To be added
 * March 15 2021
   * Added base.html, home.html, view.py and wsgi.py as basic start to the website.
   * Created [Project Proposal Plan](https://docs.google.com/document/d/1WiLKD5fP7Oe071z8CqxkvvPjEyE1B9LVec0BJHgc2zc/edit?usp=sharing)  
+
+
+
+
