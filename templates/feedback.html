@@ -6,12 +6,20 @@
 
 {% block content %}
     <html>
+
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    </head>
+
         <style>
             body{
                 background:linear-gradient(to right, #0062E6, #33AEFF);
                 margin:0
+            }
+
+            .dark-mode {
+                background: linear-gradient(to right, #3d3c3c, #3d3d3d);
             }
 
             .form{
@@ -86,7 +94,6 @@
                 color:#fff
             }
         </style>
-    </head>
 
     <body>
 
@@ -118,6 +125,15 @@
         <button>Submit Feedback</button>
 
     </form>
+
+    <input onclick="myFunction()" type="checkbox" checked data-toggle="toggle" data-onstyle="dark">
+
+    <script>
+        function myFunction() {
+            var element = document.body;
+            element.classList.toggle("dark-mode");
+        }
+    </script>
 
     </body>
     </html>

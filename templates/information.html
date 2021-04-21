@@ -29,10 +29,15 @@
             margin: 0 auto;
             padding: var(--space);
             font-family: "Sura", sans-serif;
-            color: white;
-            background-color: rgb(29, 30, 34);
+            color: black;
+            background-color: white;
             margin-top: -4%;
         }
+        .dark-mode {
+            background-color: rgb(29, 30, 34);
+            color: white;
+        }
+
         h1{
             color: black;
         }
@@ -130,15 +135,81 @@
         .promo:hover .image-wrapper::after {
             opacity: 1;
         }
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 60px;
+            height: 34px;
+        }
+
+        .switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            -webkit-transition: .4s;
+            transition: .4s;
+        }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 26px;
+            width: 26px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            -webkit-transition: .4s;
+            transition: .4s;
+        }
+
+        input:checked + .slider {
+            background-color: #2196F3;
+        }
+
+        input:focus + .slider {
+            box-shadow: 0 0 1px #2196F3;
+        }
+
+        input:checked + .slider:before {
+            -webkit-transform: translateX(26px);
+            -ms-transform: translateX(26px);
+            transform: translateX(26px);
+        }
+
+        /* Rounded sliders */
+        .slider.round {
+            border-radius: 34px;
+        }
+
+        .slider.round:before {
+            border-radius: 50%;
+        }
     </style>
 
     <body>
+
+    <h6 style="text-align: left">Dark Mode</h6>
+    <label class="switch">
+        <input onclick="myFunction()" type="checkbox">
+        <span class="slider round"></span>
+    </label>
+
     <a href = "/info/faq/">
         <div class="promo" style="--overlay-color: hotpink">
             <div class="image-wrapper" >
                 <img src="https://images.unsplash.com/photo-1554620121-59e7f3f6e3a4?ixlib=rb-1.2.1&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=800&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjE0NTg5fQ " />
             </div>
-            <h2 style="color:white" class="title" data-cta="Learn some stuff →">Some FAQ</h2>
+            <h2 style="color:#2acaec" class="title" data-cta="Learn some stuff →">Some FAQ</h2>
         </div>
     </a>
 
@@ -148,7 +219,7 @@
             <div class="image-wrapper">
                 <img src="https://images.unsplash.com/photo-1523806762236-1d3a6b7eb3fd?ixlib=rb-1.2.1&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=800&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjE0NTg5fQ"/>
             </div>
-            <h2 style="color:white" class="title" data-cta="Go eco →">Prevention Tips</h2>
+            <h2 style="color:#2acaec" class="title" data-cta="Go eco →">Prevention Tips</h2>
         </div>
     </a>
 
@@ -158,7 +229,7 @@
             <div class="image-wrapper">
                 <img src="https://live.staticflickr.com/5484/12004131706_2c0f366685_b.jpg"/>
             </div>
-            <h2 style="color:white" class="title" data-cta="Smoky... →">Trends & Patterns</h2>
+            <h2 style="color:#2acaec" class="title" data-cta="Smoky... →">Trends & Patterns</h2>
         </div>
     </a>
 
@@ -168,9 +239,14 @@
             <div class="image-wrapper">
                 <img src="https://static.scientificamerican.com/sciam/cache/file/66865348-D82E-4938-BC9214985A3D402F_source.png"/>
             </div>
-            <h2 style="color:white" class="title" data-cta="More knowledge awaits →">Learn More</h2>
+            <h2 style="color:#2acaec" class="title" data-cta="More knowledge awaits →">Learn More</h2>
         </div>
     </a>
-
+    <script>
+        function myFunction() {
+            var element = document.body;
+            element.classList.toggle("dark-mode");
+        }
+    </script>
     </body>
 {% endblock %}
