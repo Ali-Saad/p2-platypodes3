@@ -122,3 +122,7 @@ def ts_route():
 @app.route('/cookies/')
 def jar_route():
     return render_template("misc/cookies.html", model=model.setup())
+
+@app.route('/qstat/')
+def qstat_route():
+    return render_template("qstat.html", model=model.setup())

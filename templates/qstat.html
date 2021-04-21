@@ -1,0 +1,474 @@
+{% extends "base.html" %}
+
+{% block head %} <!-- uses Jinja in the tab title to define our name -->
+<title> Platypodes | Home </title>
+{% endblock %}
+
+{% block content %}
+<head>
+    <link rel="stylesheet" type="text/css" href="https://pixinvent.com/stack-responsive-bootstrap-4-admin-template/app-assets/css/bootstrap-extended.min.css">
+    <link rel="stylesheet" type="text/css" href="https://pixinvent.com/stack-responsive-bootstrap-4-admin-template/app-assets/fonts/simple-line-icons/style.min.css">
+    <link rel="stylesheet" type="text/css" href="https://pixinvent.com/stack-responsive-bootstrap-4-admin-template/app-assets/css/colors.min.css">
+    <link rel="stylesheet" type="text/css" href="https://pixinvent.com/stack-responsive-bootstrap-4-admin-template/app-assets/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <style>
+
+        .grey-bg {
+            background-color: #F5F7FA;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial;
+        }
+
+        /* The grid: Four equal columns that floats next to each other */
+        .column {
+            float: left;
+            width: 25%;
+            padding: 10px;
+        }
+
+        /* Style the images inside the grid */
+        .column img {
+            opacity: 0.8;
+            cursor: pointer;
+        }
+
+        .column img:hover {
+            opacity: 1;
+        }
+
+        /* Clear floats after the columns */
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* The expanding image container */
+        .container {
+            position: relative;
+            display: none;
+        }
+
+        /* Expanding image text */
+        #imgtext {
+            position: absolute;
+            bottom: 15px;
+            left: 15px;
+            color: white;
+            font-size: 20px;
+        }
+
+        /* Closable button inside the expanded image */
+        .closebtn {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            color: white;
+            font-size: 35px;
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+
+<br>
+<br>
+<br>
+<br>
+
+<body>
+<div class="grey-bg container-fluid">
+    <section id="minimal-statistics">
+        <div class="row">
+            <div class="col-12 mt-3 mb-1">
+                <h4 class="text-uppercase">Quick Statistics</h4>
+                <p>Quick Climate Change Facts</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xl-3 col-sm-6 col-12">
+                <div class="card">
+                    <div class="card-content">
+                        <div class="card-body">
+                            <div class="media d-flex">
+                                <div class="align-self-center">
+                                    <i class="fas fa-fire-alt primary font-large-2 float-left"></i>
+                                </div>
+                                <div class="media-body text-right">
+                                    <h3>54°C</h3>
+                                    <span>Hottest Recorded Temperature</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-sm-6 col-12">
+                <div class="card">
+                    <div class="card-content">
+                        <div class="card-body">
+                            <div class="media d-flex">
+                                <div class="align-self-center">
+                                    <i class="fas fa-skull-crossbones warning font-large-2 float-left"></i>
+                                </div>
+                                <div class="media-body text-right">
+                                    <h3>1,000,000</h3>
+                                    <span>Species in Danger</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-sm-6 col-12">
+                <div class="card">
+                    <div class="card-content">
+                        <div class="card-body">
+                            <div class="media d-flex">
+                                <div class="align-self-center">
+                                    <i class="icon-graph success font-large-2 float-left"></i>
+                                </div>
+                                <div class="media-body text-right">
+                                    <h3>416 ppm</h3>
+                                    <span>Carbon Dioxide Increase</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-sm-6 col-12">
+                <div class="card">
+                    <div class="card-content">
+                        <div class="card-body">
+                            <div class="media d-flex">
+                                <div class="align-self-center">
+                                    <i class="icon-pointer danger font-large-2 float-left"></i>
+                                </div>
+                                <div class="media-body text-right">
+                                    <h3>+3.3 mm/year</h3>
+                                    <span>Sea Level</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xl-3 col-sm-6 col-12">
+                <div class="card">
+                    <div class="card-content">
+                        <div class="card-body">
+                            <div class="media d-flex">
+                                <div class="media-body text-left">
+                                    <h3 class="danger">13%</h3>
+                                    <span>Ice Sheet Recesion</span>
+                                </div>
+                                <div class="align-self-center">
+                                    <i class="icon-rocket danger font-large-2 float-right"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-sm-6 col-12">
+                <div class="card">
+                    <div class="card-content">
+                        <div class="card-body">
+                            <div class="media d-flex">
+                                <div class="media-body text-left">
+                                    <h3 class="success">$100,000,000,000</h3>
+                                    <span>Disaster Expenses</span>
+                                </div>
+                                <div class="align-self-center">
+                                    <i class="icon-user success font-large-2 float-right"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xl-3 col-sm-6 col-12">
+                <div class="card">
+                    <div class="card-content">
+                        <div class="card-body">
+                            <div class="media d-flex">
+                                <div class="media-body text-left">
+                                    <h3 class="warning">4-5</h3>
+                                    <span>Largest Wildfires</span>
+                                </div>
+                                <div class="align-self-center">
+                                    <i class="icon-pie-chart warning font-large-2 float-right"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-sm-6 col-12">
+                <div class="card">
+                    <div class="card-content">
+                        <div class="card-body">
+                            <div class="media d-flex">
+                                <div class="media-body text-left">
+                                    <h3 class="primary">6</h3>
+                                    <span>Category-5 Hurricanes</span>
+                                </div>
+                                <div class="align-self-center">
+                                    <i class="icon-support primary font-large-2 float-right"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="column">
+                <img src="https://kpbs.media.clients.ellingtoncms.com/img/photos/2020/09/08/AP_20251456967852_fZkmHe9.jpg" alt="  California Fires" style="width:100%" onclick="myFunction(this);">
+            </div>
+            <div class="column">
+                <img src="https://static01.nyt.com/images/2020/01/31/world/10australialetter139-1/merlin_166536642_24b1e96c-327a-4b9c-9979-f87ed8a0b502-superJumbo.jpg" alt="  Australian Bushfires" style="width:100%" onclick="myFunction(this);">
+            </div>
+            <div class="column">
+                <img src="https://disasterphilanthropy.org/wp-content/uploads/2019/09/Hurricane-Dorian-NOAA-e1567372320508.png" alt="  Hurricane Dorian" style="width:100%" onclick="myFunction(this);">
+            </div>
+            <div class="column">
+                <img src="https://cdn.vox-cdn.com/thumbor/KzAzmATlpoyVFW7A4Ei1wedveqs=/1400x0/filters:no_upscale()/cdn.vox-cdn.com/uploads/chorus_asset/file/19348048/climate_action_tracker_2019.png" alt="  Paris Agreement" style="width:100%" onclick="myFunction(this);">
+            </div>
+        </div>
+
+        <div class="container">
+            <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+            <img id="expandedImg" style="width:100%">
+            <div id="imgtext"></div>
+        </div>
+
+        <script>
+            function myFunction(imgs) {
+                var expandImg = document.getElementById("expandedImg");
+                var imgText = document.getElementById("imgtext");
+                expandImg.src = imgs.src;
+                imgText.innerHTML = imgs.alt;
+                expandImg.parentElement.style.display = "block";
+            }
+        </script>
+
+        <br>
+        <br>
+        <br>
+
+        <!--<div class="row">
+            <div class="col-xl-3 col-sm-6 col-12">
+                <div class="card">
+                    <div class="card-content">
+                        <div class="card-body">
+                            <div class="media d-flex">
+                                <div class="media-body text-left">
+                                    <h3 class="primary">278</h3>
+                                    <span>New Posts</span>
+                                </div>
+                                <div class="align-self-center">
+                                    <i class="icon-book-open primary font-large-2 float-right"></i>
+                                </div>
+                            </div>
+                            <div class="progress mt-1 mb-0" style="height: 7px;">
+                                <div class="progress-bar bg-primary" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-sm-6 col-12">
+                <div class="card">
+                    <div class="card-content">
+                        <div class="card-body">
+                            <div class="media d-flex">
+                                <div class="media-body text-left">
+                                    <h3 class="warning">156</h3>
+                                    <span>New Comments</span>
+                                </div>
+                                <div class="align-self-center">
+                                    <i class="icon-bubbles warning font-large-2 float-right"></i>
+                                </div>
+                            </div>
+                            <div class="progress mt-1 mb-0" style="height: 7px;">
+                                <div class="progress-bar bg-warning" role="progressbar" style="width: 35%" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xl-3 col-sm-6 col-12">
+                <div class="card">
+                    <div class="card-content">
+                        <div class="card-body">
+                            <div class="media d-flex">
+                                <div class="media-body text-left">
+                                    <h3 class="success">64.89 %</h3>
+                                    <span>Bounce Rate</span>
+                                </div>
+                                <div class="align-self-center">
+                                    <i class="icon-cup success font-large-2 float-right"></i>
+                                </div>
+                            </div>
+                            <div class="progress mt-1 mb-0" style="height: 7px;">
+                                <div class="progress-bar bg-success" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-sm-6 col-12">
+                <div class="card">
+                    <div class="card-content">
+                        <div class="card-body">
+                            <div class="media d-flex">
+                                <div class="media-body text-left">
+                                    <h3 class="danger">423</h3>
+                                    <span>Total Visits</span>
+                                </div>
+                                <div class="align-self-center">
+                                    <i class="icon-direction danger font-large-2 float-right"></i>
+                                </div>
+                            </div>
+                            <div class="progress mt-1 mb-0" style="height: 7px;">
+                                <div class="progress-bar bg-danger" role="progressbar" style="width: 40%" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="stats-subtitle">
+        <div class="row">
+            <div class="col-12 mt-3 mb-1">
+                <h4 class="text-uppercase">Statistics With Subtitle</h4>
+                <p>Statistics on minimal cards with Title &amp; Sub Title.</p>
+            </div>
+        </div>
+
+
+
+
+
+        <div class="row">
+            <div class="col-xl-6 col-md-12">
+                <div class="card overflow-hidden">
+                    <div class="card-content">
+                        <div class="card-body cleartfix">
+                            <div class="media align-items-stretch">
+                                <div class="align-self-center">
+                                    <i class="icon-pencil primary font-large-2 mr-2"></i>
+                                </div>
+                                <div class="media-body">
+                                    <h4>Total Posts</h4>
+                                    <span>Monthly blog posts</span>
+                                </div>
+                                <div class="align-self-center">
+                                    <h2>18,000</h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xl-6 col-md-12">
+                <div class="card">
+                    <div class="card-content">
+                        <div class="card-body cleartfix">
+                            <div class="media align-items-stretch">
+                                <div class="align-self-center">
+                                    <i class="icon-speech warning font-large-2 mr-2"></i>
+                                </div>
+                                <div class="media-body">
+                                    <h4>Total Comments</h4>
+                                    <span>Monthly blog comments</span>
+                                </div>
+                                <div class="align-self-center">
+                                    <h2>84,695</h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+
+
+
+
+        <div class="row">
+            <div class="col-xl-6 col-md-12">
+                <div class="card">
+                    <div class="card-content">
+                        <div class="card-body cleartfix">
+                            <div class="media align-items-stretch">
+                                <div class="align-self-center">
+                                    <h2 class="mr-2">$76,456.00</h2>
+                                </div>
+                                <div class="media-body">
+                                    <h4>Total Sales</h4>
+                                    <span>Monthly Sales Amount</span>
+                                </div>
+                                <div class="align-self-center">
+                                    <i class="icon-heart danger font-large-2"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xl-6 col-md-12">
+                <div class="card">
+                    <div class="card-content">
+                        <div class="card-body cleartfix">
+                            <div class="media align-items-stretch">
+                                <div class="align-self-center">
+                                    <h2 class="mr-2">$36,000.00</h2>
+                                </div>
+                                <div class="media-body">
+                                    <h4>Total Cost</h4>
+                                    <span>Monthly Cost</span>
+                                </div>
+                                <div class="align-self-center">
+                                    <i class="icon-wallet success font-large-2"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>-->
+    </section>
+
+
+
+
+
+
+
+
+</div>
+</body>
+{% endblock %}
