@@ -6,14 +6,14 @@ class Pascal:
     # function defined for pascal's triangle with parameter 'n'. This is the class object
 
     def __init__(self, num):
-        if num < 0 or num > 20:
+        if num < 0 or num > 20:     # Perhaps selection?
             raise ValueError('Invalid Value')
         self._pascal = []
 
         # the range has n + 1 instead of n because range function (1, n - 1) interval
         # therefore, 1 must be added for just n
         # ex: n = 5. The range goes from 1, 5 and produces 5 rows. Using only (1, n) would only give 4 rows
-        for row in range(1, num + 1):
+        for row in range(1, num + 1):   # Iterations
             # variable for starting value. Changing this will make the same pattern but with different starting values
             start = 1
             row_l = []
@@ -49,6 +49,9 @@ if __name__ == "__main__":
     pascal = Pascal(user_input)
     print(pascal.pascal)
 
-'''pascal's triangle is used to find binomial coefficients.
-For example, (x+1)^6 will have the coefficients of the 
-pascal's triangle's 7th row'''
+
+
+
+
+
+
