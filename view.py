@@ -2,7 +2,7 @@ from flask import Flask, render_template, request
 import model
 import sqlite3 as sl3
 
-#import stats
+# import stats
 import storefb
 import storesignup
 # import storelogin
@@ -11,7 +11,8 @@ from members.pragadeesh import members_pragadeesh_bp
 from members.ayman import members_ayman_bp
 from members.ali import members_ali_bp
 from members.mustafa import members_mustafa_bp
-#import sqlite3 as sl3
+
+# import sqlite3 as sl3
 
 # Blueprints
 app = Flask(__name__)
@@ -20,14 +21,18 @@ app.register_blueprint(members_pragadeesh_bp, url_prefix='/pragadeesh')
 app.register_blueprint(members_ali_bp, url_prefix='/ali')
 app.register_blueprint(members_ayman_bp, url_prefix='/ayman')
 app.register_blueprint(members_mustafa_bp, url_prefix='/mustafa')
+
+
 @app.route('/blueprint/')
 def blue_route():
     return render_template("blueprint.html", model=model.setup())
+
 
 # main home pages
 @app.route('/')  # app routes to various html pages that we have assigned it to
 def home_route():
     return render_template("home.html", model=model.setup())
+
 
 @app.route('/aboutus/')
 def about_route():
@@ -39,26 +44,32 @@ def about_route():
 def lock_route():
     return render_template("lock.html", model=model.setup())
 
+
 # info app routes
 @app.route('/info/')
 def info_route():
     return render_template("information.html", model=model.setup())
 
+
 @app.route('/info/faq/')
 def faq_route():
     return render_template("faq.html", model=model.setup())
+
 
 @app.route('/info/prevention/')
 def prevent_route():
     return render_template("prevention.html", model=model.setup())
 
+
 @app.route('/info/trends/')
 def trends_route():
     return render_template("trends.html", model=model.setup())
 
+
 @app.route('/login/')
 def login_route():
     return render_template("login.html", model=model.setup())
+
 
 @app.route('/login', methods=['POST'])
 def login():
@@ -73,9 +84,11 @@ def login():
     else:
         return render_template("login.html", msg='Invalid Username or Password', model=model.setup())
 
+
 @app.route('/register/')
 def register_route():
     return render_template("register.html", model=model.setup())
+
 
 @app.route('/sign_up', methods=['POST'])
 def sign_up():
@@ -93,9 +106,11 @@ def sign_up():
     '''
     return render_template("login.html", model=model.setup())
 
+
 @app.route('/feedback/')
 def fb_route():
     return render_template("feedback.html", model=model.setup())
+
 
 @app.route('/feedback_form', methods=['POST'])
 def feedback_form():
@@ -115,13 +130,16 @@ def feedback_form():
 
     return render_template("misc/confirmation.html", model=model.setup())
 
+
 @app.route('/tosandp/')
 def ts_route():
     return render_template("misc/tos&p.html", model=model.setup())
 
+
 @app.route('/cookies/')
 def jar_route():
     return render_template("misc/cookies.html", model=model.setup())
+
 
 @app.route('/qstat/')
 def qstat_route():
