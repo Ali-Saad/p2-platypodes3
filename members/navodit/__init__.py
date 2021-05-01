@@ -43,5 +43,6 @@ def sort():
 @members_navodit_bp.route('/order', methods=['POST'])
 def order():
     num = request.form['numbers']
-    sortedList = listify(num)
+    select = request.form['mySelect']
+    sortedList = listify(num, select)
     return render_template("bubblesort.html", response=sortedList, model=model.setup())

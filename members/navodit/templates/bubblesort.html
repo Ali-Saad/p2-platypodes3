@@ -65,6 +65,26 @@
             5px 5px 0 0 #d98e20;
         }
 
+        select{
+            padding: 8px 12px;
+            color: #333333;
+            background-color: #eeeeee;
+            border: 1px solid #dddddd;
+            cursor: pointer;
+            border-radius: 5px;
+            width: 200px;
+            height: 100px;
+        }
+
+        select:focus,
+        select:hover{
+            outline: none;
+            border: 1px solid #bbbbbb;
+        }
+
+        select option{
+            background: #ffffff;
+        }
 
     </style>
     <meta charset="UTF-8">
@@ -88,6 +108,12 @@
         <tr>
             <td>
                 <button>Sort</button>
+            </td>
+            <td>
+                <select name="mySelect">
+                    <option value= 1>Ascending Order</option>
+                    <option value= 2 >Descending Order</option>
+                </select>
             </td>
         </tr>
         <tr>
