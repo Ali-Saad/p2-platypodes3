@@ -1,9 +1,10 @@
 class bubbleSort:
-    def __init__(self, int_list):
-        self._listO = []
-        self._listO += int_list
-        self._listS = int_list
+    def __init__(self, user_input):
+        self._listO = list(map(int, user_input.split(",")))
+        self._listS = self._listO.copy()
+        self._listIter = []
         for i in range(len(self._listS) - 1, 0, -1):  # (6, -1, 0, -1)
+            self._listIter.append(self._listS.copy())
             for j in range(i):
                 if self._listS[j] > self._listS[j + 1]:
                     temp = self._listS[j]
@@ -19,11 +20,15 @@ class bubbleSort:
     def listO(self):
         return self._listO
 
+    @property
+    def listIter(self):
+        return self._listIter
+
 
 if __name__ == "__main__":
-    string = input("enter string: ")
-    int_list = list(map(int, string.split(",")))
-    sortedList = bubbleSort(int_list)
+    # string = input("enter string: ")
+    string = "43,7,9,2"
+    sortedList = bubbleSort(string)
 
     print("Original List")
     print(sortedList.listO)

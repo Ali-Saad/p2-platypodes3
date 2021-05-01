@@ -23,6 +23,5 @@ def lab1():
 @members_pragadeesh_bp.route("/bubble/", methods=["GET", "POST"])
 def lab2():
     if request.form:
-        return render_template("bubblesort.html", listS=bubbleSort(request.form.get("str")))
-    start = 2,9,5,0,1
-    return render_template("bubblesort.html", listS=bubbleSort(start).listS)
+        return render_template("pragadeesh/bubblesort.html", bubble=bubbleSort(request.form.get("str")))
+    return render_template("pragadeesh/bubblesort.html", bubble=bubbleSort("2,9,5,7,3"))

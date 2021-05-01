@@ -5,12 +5,14 @@
             <button class="button_cont">Derive</button>
         </form>
         <h4 style="font-size: 20px; text-align: center; font-family: Times">enter string</h4>
-        <div class="col-12" style="text-align: center; font-size: 2pt; font-family: Times ">
+        <div class="col-12" style="text-align: center; font-family: Times ">
             </br>
+            {{bubble.listO}}
+            {% for iter in bubble.listIter %}
+            <h3>{{iter}}</h3>
+            {% endfor %}
             <!-- Series -->
-            <!--{% for str in listS.listS %}
-            <h3>{{str}}</h3>
-            {% endfor %}-->
+            {{bubble.listS}}
         </div>
     </div>
 </html>
