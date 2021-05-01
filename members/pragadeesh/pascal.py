@@ -1,7 +1,7 @@
 class pascalTriangle:
 
     def __init__(self, num):
-        if num < 0 or num > 100:
+        if num < 1 or num > 50:
             raise ValueError('Invalid Value')
         self._pascalList = []
         # 2D array to store the values
@@ -40,7 +40,7 @@ if __name__ == "__main__":
             # asks user for an integer value
             user_input = int(input('Please enter an integer value: '))
             # if user doesn't input an integer or inputs a number larger than 50, it will raise the ValueError
-            if user_input > 100:
+            if user_input > 50:
                 raise ValueError
             break
         # ValueError sends an error message

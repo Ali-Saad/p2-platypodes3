@@ -24,6 +24,5 @@ def lab1():
 def lab2():
     if request.form:
         return render_template("bubblesort.html", listS=bubbleSort(request.form.get("str")))
-        # return render_template("bubblesort.html", listO=bubbleSort(request.form.get("str")))
     start = 2,9,5,0,1
-    return render_template("bubblesort.html", listS=bubbleSort(start))
+    return render_template("bubblesort.html", listS=bubbleSort(start).listS)
