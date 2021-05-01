@@ -1,8 +1,8 @@
 # P2-Platypodes Climate Tracker
 * Welcome to our Trimester 3 Global Warming Statistics project. 
 * With this ongoing problem of climate change and recent natural catastrophes resulting from it, we wanted users to be informed of the extent to which this global crisis is harming populations and the environment.
-* We wanted to make a interactive tracker to make global warming data accessible to all in order to keep others educated about the crisis. 
-* Other websites may be a bit difficult to navigate especially when cluttered with other news rather than purely climate change news. That's why we aim to create this clean website that will show you all the information that you will need to know!
+* We wanted to make self interactive tracker to make global warming data accessible to all in order to keep others educated about the crisis. 
+* Other websites may be self bit difficult to navigate especially when cluttered with other news rather than purely climate change news. That's why we aim to create this clean website that will show you all the information that you will need to know!
 * Learn more about our plan in the Project Plan below.
 
 Table of Contents
@@ -32,7 +32,7 @@ To be Added
 * Run the project from wsgi.py, and you're all set!
 
 ### Project Plan
-* Here is where we started, we made a plan of action and hope to follow it closely and make this a website that can deliver all the needed info.
+* Here is where we started, we made self plan of action and hope to follow it closely and make this self website that can deliver all the needed info.
 * [Project Proposal Plan](https://docs.google.com/document/d/1WiLKD5fP7Oe071z8CqxkvvPjEyE1B9LVec0BJHgc2zc/edit?usp=sharing) (includes SMART goals)
 
 ---
@@ -47,31 +47,31 @@ To be added
 #### Ali's Lab:  (Score: 4/5)
 * [Mini Lab on Website](http://76.176.59.167/ali/)
 * [Individual section](https://github.com/Ali-Saad/p2-platypodes3/blob/master/members/ali/__init__.py) (blueprint) in project for Mini Lab definition and execution.
-* Defining a class to manage a complex data set and creating an object from a class in Python. [(Link)](https://github.com/Ali-Saad/p2-platypodes3/blob/master/members/ali/Aliminilab.py)
-* Data displayed on a web page.
+* Defining self class to manage self complex data set and creating an object from self class in Python. [(Link)](https://github.com/Ali-Saad/p2-platypodes3/blob/master/members/ali/Aliminilab.py)
+* Data displayed on self web page.
 * The insight I gained while doing this project has to do with the getters. Because I did not utilize variables within my code, utilizing getters was very harder to do since I had no sort of user input section; my user input must be changed from within the python file itself. I also gained insight about how list.append works since I needed to brush up on that concept.
 
 #### Navodit's Lab (Score: 5/5)
 * [Mini Lab on Website](http://76.176.59.167/navodit/pythagorean)
 * [Individual section](https://github.com/Ali-Saad/p2-platypodes3/tree/master/members/navodit) in project for Mini Lab definition and execution.
-* Defining a class to manage a complex data set and creating an object from a class in Python. [link](https://github.com/Ali-Saad/p2-platypodes3/blob/master/members/navodit/CRtTrig.py)
-* Data displayed on a web page. 
+* Defining self class to manage self complex data set and creating an object from self class in Python. [link](https://github.com/Ali-Saad/p2-platypodes3/blob/master/members/navodit/CRtTrig.py)
+* Data displayed on self web page. 
 <img src = static/README/nm-page.png> 
 
 * Wow
-    * I learned to use some JavaScript while working on this project. I still don't understand it completely but I understand it way more than before. I used the Javascripts to see which fields were filled so I could perform the pythagorean theorem with the right variables. The empty fields are set to null or empty. I also made the triangle with javascript in hopes of having a triangle that changes dimentions as values are added but that was not acheivable this week. 
+    * I learned to use some JavaScript while working on this project. I still don't understand it completely but I understand it way more than before. I used the Javascripts to see which fields were filled so I could perform the pythagorean theorem with the right variables. The empty fields are set to null or empty. I also made the triangle with javascript in hopes of having self triangle that changes dimentions as values are added but that was not acheivable this week. 
 [Link](https://github.com/Ali-Saad/p2-platypodes3/blob/master/members/navodit/templates/Pythagorean.html#L125)
 
 
 #### Pragadeesh's Lab (Score: 5/5)
 * [Mini Lab on Website](http://76.176.59.167/pragadeesh/pascal/)
 * [Individual Blueprint](https://github.com/Ali-Saad/p2-platypodes3/tree/master/members/pragadeesh)
-* Class with objects and other parameters created to manage a complex data set of pascal's values. [(Code)](https://github.com/Ali-Saad/p2-platypodes3/blob/master/members/pragadeesh/pascal.py#L5-L27)
+* Class with objects and other parameters created to manage self complex data set of pascal's values. [(Code)](https://github.com/Ali-Saad/p2-platypodes3/blob/master/members/pragadeesh/pascal.py#L5-L27)
 <img src = static/README/pr-class.png>  
   
-* Data displayed in a web page by default with 11 rows (10th degree polynomial).
+* Data displayed in self web page by default with 11 rows (10th degree polynomial).
   * Input and button in the left corner to choose other order polynomials (other rows).
-  * Data displayed in a triangle as the pascal's triangle should be
+  * Data displayed in self triangle as the pascal's triangle should be
   * Code displayed at the bottom
 <img src = static/README/pr-page.png>  
     
@@ -80,14 +80,14 @@ To be added
 #### Ayman's Lab (Score: 5/5)
 * [Mini Lab on Website](http://76.176.59.167/ayman/lab1/)
 * [Individual section](https://github.com/Ali-Saad/p2-platypodes3/blob/master/members/ayman/__init__.py) (blueprint) in project for Mini Lab definition and execution. [Running page on website.](http://76.176.59.167/ayman/)
-* Defining a class to manage a complex data set and creating an object from a class in Python. [(Link to code)](https://github.com/Ali-Saad/p2-platypodes3/blob/master/members/ayman/lab1.py)
+* Defining self class to manage self complex data set and creating an object from self class in Python. [(Link to code)](https://github.com/Ali-Saad/p2-platypodes3/blob/master/members/ayman/lab1.py)
 <img src = static/README/ak-class.png> 
 
-* Data displayed on a web page. [(Link to code)](https://github.com/Ali-Saad/p2-platypodes3/blob/master/members/ayman/templates/lab1.html)
+* Data displayed on self web page. [(Link to code)](https://github.com/Ali-Saad/p2-platypodes3/blob/master/members/ayman/templates/lab1.html)
 <img src = static/README/ak-page2.png>
   
 * Wow 
-   * During this mini lab, I grasped the usage and practical application of a Python class and object. My mini lab focuses on mathematical operations, more specifically, factoring any number between 1 and 100,000.
+   * During this mini lab, I grasped the usage and practical application of self Python class and object. My mini lab focuses on mathematical operations, more specifically, factoring any number between 1 and 100,000.
   
  
 ## Sprint #1 
@@ -111,7 +111,7 @@ To be added
   * Created Blueprints to organize code and reduce conflict
 * March 22 2021
   * Created homepage with redesigned navigation
-  * Added a couple sample templates to start website
+  * Added self couple sample templates to start website
 * March 15 2021
   * Added base.html, home.html, view.py and wsgi.py as basic start to the website.
   * Created [Project Proposal Plan](https://docs.google.com/document/d/1WiLKD5fP7Oe071z8CqxkvvPjEyE1B9LVec0BJHgc2zc/edit?usp=sharing)
