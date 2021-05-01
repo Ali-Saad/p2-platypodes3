@@ -5,11 +5,13 @@
     <title>Navodit</title>
     <style>
         body{
-            background-color: #f7d9a1;
+            background-color: #243447;
         }
         h1{
             text-align: center;
-            font-family: "Lucida Console", "Courier New", monospace;
+            font-size: 2em;
+            font-family: "Lucida Console", Courier, monospace;
+            color: white;
         }
         img{
             width: 1000px;
@@ -21,10 +23,70 @@
             margin-right: auto;
             width: 50%;
         }
+        .btn{
+            position: relative;
+            height:150px;
+            border: 2px solid #41f321;
+            margin: 10px;
+            display: inline-block;
+            text-decoration: #41f321;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            transition: 0.5s;
+            overflow: hidden;
+            font-size: 24px;
+            color: white;
+            width: 15em;
+            text-align: center;
+            line-height: 100px;
+
+        }
+
+
+
+        .btn:hover{
+            color: #111;
+        }
+
+        .btn span{
+            position: absolute;
+            display: block;
+            width: 0px;
+            height: 0px;
+            transform: translate(-50%,-50%);
+            border-radius: 100%;
+            transition: width 0.5s, height 0.5s;
+            z-index: -1;
+        }
+
+        .btn1 span {background: #4bc970;}
+        .btn2 span {background: #51d7f5;}
+        .btn3 span {background: #ebd026;}
+        .btn4 span {background: #fc4747;}
+        .btn5 span {background: #518050;}
+        .btn6 span {background: #865be3;}
+        .btn7 span {background: #6ae6cd;}
+
+
+
+
+        .btn:hover span{
+            width: 800px;
+            height: 800px;
+        }
     </style>
 </head>
 <body>
 <h1>Navodit's Mini Labs</h1>
-<img src="/static/bp_static/ComingSoon.png" alt="ComingSoon" class="center">
+<div>
+<table align="center">
+    <tr>
+        <td>
+            <a href="pythagorean" class="btn btn1" id="pythagorean"><span></span>Class</a>
+            <a href="bubblesort" class="btn btn2" id="bubblesort"><span></span>Bubble Sort</a>
+        </td>
+    </tr>
+</table>
+</div>
 </body>
 </html>

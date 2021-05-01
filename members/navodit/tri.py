@@ -10,7 +10,7 @@ triangleList = []
 def calculateSides(side1, side2, hypo):
     print("Inside tri. Values are", side1, side2, hypo)
     R = RtTrig()
-
+# selected based on two input values
     if not math.isnan(side2) and not math.isnan(hypo):
         print("creating object with side2 and hypo with values ", side2, hypo)
         R.set_sideAndHypo(side2, hypo)

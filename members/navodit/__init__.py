@@ -1,6 +1,8 @@
 from flask import Blueprint, render_template, Flask, request
 import model
 from members.navodit import tri
+from members.navodit import sort
+from members.navodit.sort import listify
 
 members_navodit_bp = Blueprint('navodit', __name__, static_folder="bp_static", template_folder="templates")
 
@@ -25,10 +27,21 @@ def submitSides():
     print(jsonStr)
     return jsonStr
 
+
 @members_navodit_bp.route('/sorttriangles', methods=['POST'])
 def sorttriangles():
-
-
     jsonStr = tri.getSortedList()
     print(jsonStr)
     return jsonStr
+
+
+@members_navodit_bp.route('/bubblesort')
+def sort():
+    return render_template("bubblesort.html", model=model.setup())
+
+
+@members_navodit_bp.route('/order', methods=['POST'])
+def order():
+    num = request.form['numbers']
+    sortedList = listify(num)
+    return render_template("bubblesort.html", response=sortedList, model=model.setup())
