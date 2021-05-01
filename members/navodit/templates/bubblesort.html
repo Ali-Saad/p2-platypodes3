@@ -13,22 +13,29 @@
         }
         h2{
             text-align: left;
-            font-size: 24px;
+            font-size: 35px;
             font-family: "Lucida Console", Courier, monospace;
             color: black;
         }
         h5{
             font-size: 40px;
         }
+        p{
+            text-align: left;
+            font-size: 24px;
+            font-family: "Lucida Console", Courier, monospace;
+            color: black;
+        }
         input[type="text"]{
             width: 1000px;
-            height: 150px;
+            height: 100px;
             padding: 12px 20px;
             box-sizing: border-box;
             border: 2px solid #ccc;
             border-radius: 4px;
             background-color: #f8f8f8;
             resize: none;
+            font-size: 24px;
         }
         button{
             outline:0;
@@ -73,7 +80,8 @@
             cursor: pointer;
             border-radius: 5px;
             width: 200px;
-            height: 100px;
+            height: 80px;
+            font-size: 18px;
         }
 
         select:focus,
@@ -107,13 +115,20 @@
         </tr>
         <tr>
             <td>
-                <button>Sort</button>
-            </td>
-            <td>
                 <select name="mySelect">
                     <option value= 1>Ascending Order</option>
                     <option value= 2 >Descending Order</option>
                 </select>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <h5> </h5>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button>Sort</button>
             </td>
         </tr>
         <tr>
