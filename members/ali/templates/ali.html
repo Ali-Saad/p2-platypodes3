@@ -10,9 +10,9 @@
 <div>
     <form id="factorialform" action="/ali/Aliminilab/" method="POST" >
         <input style="margin-left: 20px" class="col-1" name="row" id="row" type="number" min="1" max="20" >
-        <button class="button_cont">Derive</button>
+        <button class="button_cont">Find it!</button>
     </form>
-    <h4 style="font-size: 20px; text-align: center; font-family: Times">Please select values.</h4>
+    <h4 style="font-size: 20px; text-align: center; font-family: Times"> Enter a value to find its factorial!</h4>
     <div class="col-12" style="text-align: center; font-size: 2pt; font-family: Times ">
         </br>
         <!-- Series -->
@@ -22,3 +22,58 @@
 </div>
 </body>
 </html>
+
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Bubble  Sort{% endblock %}</title>
+
+    <style>
+    .single {
+      background-color: #5F5AA8;
+    }
+  </style>
+</head>
+
+{% block content %}
+<div class="container">
+
+    <div class="center-block" style="margin: 2% 5% 5%; font-family: gilroy,serif;">
+
+        <div class="col-12" style="text-align: center;">
+            <h1><strong>Bubble Sort</strong></h1>
+        </div>
+
+        <div class="jumbotron text-center row">
+
+            <div class="col-md-5">
+                <div id="multi" style="background-color: #30292F">
+                    <form action="/ali/alibubblesort/" method="post">
+                        <label style="color: #FFFFFF"><b>Input Numbers to Bubble Sort</b></label>
+                        <g id="multi_input">
+                            <input style="margin-bottom: 10px" name="user_input1" type="number">
+                            <input style="margin-bottom: 10px" name="user_input2" type="number">
+                            <input style="margin-bottom: 10px" name="user_input3" type="number">
+                            <input style="margin-bottom: 10px" name="user_input4" type="number">
+                            <input style="margin-bottom: 10px" name="user_input5" type="number">
+                        </g>
+                        <br>
+                        <input style="margin-bottom: 10px" type="submit" class="button" value="Submit">
+                    </form>
+                </div>
+            </div>
+
+
+            <div class="col-md-5">
+                <div style="background-color: #419F54">
+                    <h3>Output</h3>
+                    <p>{{output_list}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+</div>
+
+{% endblock %}

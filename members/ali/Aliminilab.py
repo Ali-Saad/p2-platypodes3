@@ -65,7 +65,7 @@ if __name__ == "__main__":
         except ValueError:
             print('Invalid value or value too large. Value must be between 0 and 1 000 000. Please try again.')
 
-    # if value is successful, then it runs user_input through the pascal's triangle function
+    # if value is successful, then it runs user_input through the factorial function
     list = Factorial(n)
     # print(Factorial.Aliminilab)
     #print(Factorial(5))
@@ -74,6 +74,3 @@ if __name__ == "__main__":
     factorial = Factorial(n)
     print(factorial.output)
     print(factorial.work)
-
-
-## make sure to change your input on lines 10 and 18 for the work() and fact()
