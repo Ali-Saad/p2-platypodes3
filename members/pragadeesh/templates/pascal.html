@@ -60,7 +60,7 @@
     </body>
     <div>
         <form id="pascalForm" action="/pragadeesh/pascal/" method="POST" >
-            <input style="margin-left: 20px" class="col-1" name="row" id="row" type="number" min="1" max="20" >
+            <input style="margin-left: 20px" class="col-1" name="row" id="row" type="number" min="1" max="50" >
             <button class="button_cont">Derive</button>
         </form>
         <h4 style="font-size: 20px; text-align: center; font-family: Times">Please select values up to 20 rows. The
@@ -68,19 +68,10 @@
         <div class="col-12" style="text-align: center; font-size: 2pt; font-family: Times ">
             </br>
             <!-- Series -->
-            {% for row in pascal.pascal %}
+            {% for row in pascal.pascalList %}
             <h3>{{row}}</h3>
             {% endfor %}
         </div>
     </div>
 </br>
-</br>
-</br>
-</br>
-</br>
-</br>
-<div>
-    <h3 style="font-size: 25px; text-align: center; font-family: Times">pascal.py</h3>
-    <script style="margin: 20px 20px 20px 20px; " src="https://gist.github.com/PragadeeshRaj/ff4703e818d529a057c81757f34f2096.js"></script>
-</div>
 {% endblock %}

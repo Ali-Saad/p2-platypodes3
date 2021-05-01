@@ -1,57 +1,56 @@
-# pascal triangle algorithm within a class
-from builtins import ValueError, range, print, int, property, input
-
-
-class Pascal:
-    # function defined for pascal's triangle with parameter 'n'. This is the class object
+class pascalTriangle:
 
     def __init__(self, num):
-        if num < 0 or num > 20:     # Perhaps selection?
+        if num < 1 or num > 50:
             raise ValueError('Invalid Value')
-        self._pascal = []
+        self._pascalList = []
+        # 2D array to store the values
+        matrix = [[0 for x in range(num)]
+                  for y in range(num)]
 
-        # the range has n + 1 instead of n because range function (1, n - 1) interval
-        # therefore, 1 must be added for just n
-        # ex: n = 5. The range goes from 1, 5 and produces 5 rows. Using only (1, n) would only give 4 rows
-        for row in range(1, num + 1):   # Iterations
-            # variable for starting value. Changing this will make the same pattern but with different starting values
-            start = 1
-            row_l = []
-            # ex: if n = 5. There are 5 rows. This loop would go through i as 1, 2, 3, 4, and 5
-            for i in range(1, row + 1):
-                # first number in every line is 1 (start = 1)
-                print(start, end=" ")
-                row_l.append(start)
-                start = int(start * (row - i) / i)
-            self._pascal.append(row_l)
-            print("")
+        # iterating through the rows
+        for row in range(0, num):
+            rowlist = []
+            # iterating through each value of the row
+            for column in range(0, row + 1):
+
+                # first and last column are 0
+                if column == 0 or column == row:
+                    matrix[row][column] = 1
+                    print(matrix[row][column], end=" ")
+                    rowlist.append(matrix[row][column])
+
+                # calculating the sum of the above two values
+                else:
+                    matrix[row][column] = (matrix[row - 1][column - 1] + matrix[row - 1][column])
+                    print(matrix[row][column], end=" ")
+                    rowlist.append(matrix[row][column])
+            print("\n", end="")
+            self._pascalList.append(rowlist)
 
     @property
-    def pascal(self):
-        return self._pascal
+    def pascalList(self):
+        return self._pascalList
 
 
-# testing with user inputs
-# lines 16-27 for checking valid integer values
+# Driver Code
 if __name__ == "__main__":
     while True:
         try:
             # asks user for an integer value
             user_input = int(input('Please enter an integer value: '))
             # if user doesn't input an integer or inputs a number larger than 50, it will raise the ValueError
-            if user_input > 20:
+            if user_input > 50:
                 raise ValueError
             break
         # ValueError sends an error message
         except ValueError:
             print('Invalid value or value too large. Please try again.')
     # if value is successful, then it runs user_input through the pascal's triangle function
-    pascal = Pascal(user_input)
-    print(pascal.pascal)
+    pascal = pascalTriangle(user_input)     # Pascal = class
+    print(pascal.pascalList)
 
 
-
-
-
-
-
+    '''num = int(input("Enter the number of rows: "))
+    pascal = pascalTriangle(num)
+    print(pascal.pascalList)'''
