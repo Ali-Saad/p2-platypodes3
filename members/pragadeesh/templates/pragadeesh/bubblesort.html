@@ -1,18 +1,98 @@
-<html>
-    <div>
-        <form id="pascalForm" action="/pragadeesh/bubble/" method="POST" >
-            <input style="margin-left: 20px" class="col-1" name="str" id="str" type="string">
-            <button class="button_cont">Derive</button>
-        </form>
-        <h4 style="font-size: 20px; text-align: center; font-family: Times">enter string</h4>
-        <div class="col-12" style="text-align: center; font-family: Times ">
-            </br>
-            {{bubble.listO}}
-            {% for iter in bubble.listIter %}
-            <h3>{{iter}}</h3>
-            {% endfor %}
-            <!-- Series -->
-            {{bubble.listS}}
+{% extends "base.html" %}
+
+{% block head %}
+<title> Pascal's Triangle </title>
+{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</br>
+</br>
+</br>
+</br>
+</br>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="jumbotron">
+                <h2>
+                    Hello, bubble!
+                </h2>
+                <div>
+                    Have a long list of numbers that need sorting? Bubble sort is the solution for you.
+                </div>
+                <div>
+                    It even shows its work! You can even see each step along the way, satisfying every math teacher's dream.
+                </div>
+
+<br>
+
+                <button style="background-color: #eaecef; border-color: #eaecef" data-toggle="modal" data-target="#exampleModal">
+                    Instructions for Use
+                </button>
+<br>
+                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Instructions for Use</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                Please enter integer values of what you want sorted. for example, if you wanted to sort
+                                1, 6, 8, 2, 6; then please type: 1,6,8,2,6 into the input. Do not include spaces and
+                                separate each number with a comma. Thank you!
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+<br>
+                <div>
+                    <form id="pascalForm" action="/pragadeesh/bubble/" method="POST" >
+                        <input style="border-radius: 20px" class="col-1" name="str" id="str" type="string">
+                        <button style="margin-left: 20px" class="btn btn-primary">Sort!</button>
+                    </form>
+                </div>
+            </div>
         </div>
     </div>
-</html>
+    <div class="row">
+        <div class="col-md-4">
+            <h2 style="text-align: center">
+                Original List
+            </h2>
+            <p style="text-align: center">
+                {{bubble.listO}}
+            </p>
+            <!--<p>
+                <a class="btn" href="#">View details »</a>
+            </p>-->
+        </div>
+        <div class="col-md-4">
+            <h2 style="text-align: center">
+                Sorted List
+            </h2>
+            <p style="text-align: center">
+                {{bubble.listS}}
+            </p>
+        </div>
+        <div class="col-md-4" >
+            <h2 style="text-align: center">
+                Work
+            </h2>
+            <p style="text-align: center">
+                {% for iter in bubble.listIter %}
+                <p style="text-align: center">{{iter}}</p>
+                {% endfor %}
+            </p>
+        </div>
+    </div>
+<br>
+</div>
+{% endblock %}
