@@ -1,0 +1,129 @@
+{% extends "base.html" %}
+
+{% block head %}
+    <title> Number Sort </title>
+{% endblock %}
+
+{% block content %}
+    <style>
+        h2{
+            margin-top: 4%;
+            color: white;
+            text-align: center;
+        }
+        body{
+            /*background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);*/
+            background-image: url("https://wallpaperaccess.com/full/3087782.jpg")
+        }
+        h3{
+            color: white;
+            text-align: center;
+        }
+        input{
+            width: 95%;
+            position: center;
+            border: none;
+            padding: 12px 20px;
+            margin: 8px 0;
+            box-sizing: border-box;
+            border-bottom-width: 2px ;
+            border-bottom-color: #db6c87;
+            border-radius: 4px;
+            margin-top: 4%;
+        }
+        .center-block{
+            margin: auto;
+            display: block;
+        }
+        button{
+            margin-top: calc(4%);
+            left: 40%;
+            position: relative;
+            display: inline-block;
+            width: 277px;
+            height: 50px;
+            font-size: 1em;
+            font-weight: bold;
+            line-height: 60px;
+            text-align: center;
+            text-transform: uppercase;
+            background-color: transparent;
+            cursor: pointer;
+            text-decoration:none;
+            font-family: 'Roboto', sans-serif;
+            font-weight:900;
+            font-size:17px;
+            letter-spacing: 0.045em;
+            border:none;
+        }
+
+
+        button svg {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        button svg rect {
+        //stroke: #EC0033;
+            stroke-width: 4;
+            stroke-dasharray: 353, 0;
+            stroke-dashoffset: 0;
+            -webkit-transition: all 600ms ease;
+            transition: all 600ms ease;
+        }
+
+        button span{
+            background: rgb(255,130,130);
+            background: -moz-linear-gradient(left, rgb(255, 130, 130) 0%, rgb(225, 120, 237) 100%);
+            background: -webkit-linear-gradient(left, rgb(255, 130, 130) 0%, rgb(225, 120, 237) 100%);
+            background: linear-gradient(to right, rgb(255, 130, 130) 0%, rgb(225, 120, 237) 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff8282', endColorstr='#e178ed',GradientType=1 );
+
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        button:hover svg rect {
+            stroke-width: 4;
+            stroke-dasharray: 196, 543;
+            stroke-dashoffset: 437;
+        }
+    </style>
+
+    <body>
+    <h2>Number Sort Algorithm with Python Classes and Objects</h2>
+    <div>
+
+        <form id="sortForm" action="/ayman/bubbles/" method="POST" >
+            <input class="center-block" name="str" id="str" type="text" placeholder="Enter your string here (i.e. 5,2,4,1)">
+            <!-- Button Code -->
+            <button>
+                <svg width="277" height="62">
+                    <defs>
+                        <linearGradient id="grad1">
+                            <stop offset="0%" stop-color="#FF8282"/>
+                            <stop offset="100%" stop-color="#E178ED" />
+                        </linearGradient>
+                    </defs>
+                    <rect x="5" y="5" rx="25" fill="none" stroke="url(#grad1)" width="266" height="50"></rect>
+                </svg>
+                <span>Sort!</span>
+            </button>
+            <!-- End Button Code -->
+        </form>
+
+        <div class="col-12" style="text-align: center; font-family: Times ">
+            </br>
+            <h3>{{bubble.listO}}</h3>
+            {% for iter in bubble.listIter %}
+                <h3>{{iter}}</h3>
+            {% endfor %}
+            <!-- Series -->
+            <h3>{{bubble.listS}}</h3>
+        </div>
+
+
+    </div>
+    </body>
+{% endblock %}
