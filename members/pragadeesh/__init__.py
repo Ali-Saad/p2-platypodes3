@@ -17,7 +17,7 @@ def pragadeesh():
 def lab1():
     if request.form:
         return render_template("pascal.html", pascal=pascalTriangle(int(request.form.get("row"))))
-    return render_template("pascal.html", pascal=pascalTriangle(0))
+    return render_template("pascal.html", pascal=pascalTriangle(1))
 
 
 @members_pragadeesh_bp.route("/bubble/", methods=["GET", "POST"])

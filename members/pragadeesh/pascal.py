@@ -4,23 +4,18 @@ class pascalTriangle:
         if num < 1 or num > 50:
             raise ValueError('Invalid Value')
         self._pascalList = []
-        # 2D array to store the values
         matrix = [[0 for x in range(num)]
                   for y in range(num)]
 
-        # iterating through the rows
         for row in range(0, num):
             rowlist = []
-            # iterating through each value of the row
             for column in range(0, row + 1):
 
-                # first and last column are 0
                 if column == 0 or column == row:
                     matrix[row][column] = 1
                     print(matrix[row][column], end=" ")
                     rowlist.append(matrix[row][column])
 
-                # calculating the sum of the above two values
                 else:
                     matrix[row][column] = (matrix[row - 1][column - 1] + matrix[row - 1][column])
                     print(matrix[row][column], end=" ")

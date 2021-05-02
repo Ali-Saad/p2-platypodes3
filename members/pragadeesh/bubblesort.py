@@ -3,7 +3,7 @@ class bubbleSort:
         self._listO = list(map(int, user_input.split(",")))
         self._listS = self._listO.copy()
         self._listIter = []
-        for i in range(len(self._listS) - 1, 0, -1):  # (6, -1, 0, -1)
+        for i in range(len(self._listS) - 1, 0, -1):
             self._listIter.append(self._listS.copy())
             for j in range(i):
                 if self._listS[j] > self._listS[j + 1]:

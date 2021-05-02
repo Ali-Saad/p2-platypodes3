@@ -63,15 +63,19 @@
             <input style="margin-left: 20px" class="col-1" name="row" id="row" type="number" min="1" max="50" >
             <button class="button_cont">Derive</button>
         </form>
-        <h4 style="font-size: 20px; text-align: center; font-family: Times">Please select values up to 20 rows. The
-            20th row will provide binomial coefficients for the 19th power.</h4>
+        <h2 style="font-size: 20px; text-align: center; font-size: 20pt; font-family: Times">Please select values up to 50 rows.</h2>
+        <h4 style="font-size: 20px; text-align: center; font-size: 14pt; font-family: Times">Note: an nth degree binomial will have coeffecients respective to pascal's triangle's row n+1</h4>
+        <br>
+        <hr>
+        <br>
         <div class="col-12" style="text-align: center; font-size: 2pt; font-family: Times ">
             </br>
-            <!-- Series -->
             {% for row in pascal.pascalList %}
             <h3>{{row}}</h3>
-            {% endfor %}
+            {% endfor %}}
         </div>
     </div>
+</br>
+<hr>
 </br>
 {% endblock %}
