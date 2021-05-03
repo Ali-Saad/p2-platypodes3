@@ -14,8 +14,8 @@ def ayman():
 @members_ayman_bp.route("/lab1/", methods=["GET", "POST"])
 def lab1():
     if request.form:
-        return render_template("lab1.html", list = Factor(int(request.form.get("list"))))
-    return render_template("lab1.html", list = Factor(50000))
+        return render_template("lab1.html", numpass = Factor(int(request.form.get("list"))))
+    return render_template("lab1.html", numpass = Factor(50000))
 
 @members_ayman_bp.route("/bubbles/", methods=["GET", "POST"])
 def bubble():

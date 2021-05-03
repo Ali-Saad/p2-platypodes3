@@ -108,18 +108,21 @@
                     </defs>
                     <rect x="5" y="5" rx="25" fill="none" stroke="url(#grad1)" width="266" height="50"></rect>
                 </svg>
-                <span>Sort!</span>
+                <span>Sort the list!</span>
             </button>
             <!-- End Button Code -->
         </form>
 
         <div class="col-12" style="text-align: center; font-family: Times ">
             </br>
+            <h2>Unsorted List</h2>
             <h3>{{bubble.listO}}</h3>
+            <h2>Steps to sort the list...</h2>
             {% for iter in bubble.listIter %}
                 <h3>{{iter}}</h3>
             {% endfor %}
             <!-- Series -->
+            <h2>Sorted List</h2>
             <h3>{{bubble.listS}}</h3>
         </div>
 
