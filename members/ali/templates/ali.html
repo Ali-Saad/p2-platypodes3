@@ -8,7 +8,7 @@
 <h1>Ali</h1>
 <h2>Ali's Mini-Lab</h2>
 <div>
-    <form id="factorialform" action="/ali/Aliminilab/" method="POST" >
+    <form id="factorialform" action="/ali/Aliminilab" method="POST" >
         <input style="margin-left: 20px" class="col-1" name="row" id="row" type="number" min="1" max="20" >
         <button class="button_cont">Find it!</button>
     </form>
@@ -47,18 +47,14 @@
         <div class="jumbotron text-center row">
 
             <div class="col-md-5">
-                <div id="multi" style="background-color: #30292F">
-                    <form action="/ali/alibubblesort/" method="post">
+                <div style="background-color: #30292F">
+                    <form action="/ali/sorted" method="POST">
                         <label style="color: #FFFFFF"><b>Input Numbers to Bubble Sort</b></label>
-                        <g id="multi_input">
-                            <input style="margin-bottom: 10px" name="user_input1" type="number">
-                            <input style="margin-bottom: 10px" name="user_input2" type="number">
-                            <input style="margin-bottom: 10px" name="user_input3" type="number">
-                            <input style="margin-bottom: 10px" name="user_input4" type="number">
-                            <input style="margin-bottom: 10px" name="user_input5" type="number">
+                        <g>
+                            <input type="text" id="num" name="numbers">
                         </g>
                         <br>
-                        <input style="margin-bottom: 10px" type="submit" class="button" value="Submit">
+                        <button>Sort</button>
                     </form>
                 </div>
             </div>
@@ -67,7 +63,7 @@
             <div class="col-md-5">
                 <div style="background-color: #419F54">
                     <h3>Output</h3>
-                    <p>{{output_list}}</p>
+                    <p>{{response.string}}</p>
                 </div>
             </div>
         </div>

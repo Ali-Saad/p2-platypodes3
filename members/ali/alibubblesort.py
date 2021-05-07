@@ -1,34 +1,29 @@
-'''import sys,time
+class alibubbleSort:
+    def __init__(self, data):
+        # initing the arugmnet
+        self.nums = data
 
-input_array=[]
+        self.sort(self.nums)
 
-i=1
-while (i < len(sys.argv)):
-    input_array.append(int(sys.argv[i]))
-    i+=1'''
+    def sort(self, select):
+        for i in range(len(self.nums)-1, 0, -1):
+            for j in range(i):
+                if self.nums[j]>self.nums[j+1]:
+                    temp = self.nums[j]
+                    self.nums[j] = self.nums[j+1]
+                    self.nums[j+1] = temp
+    @property
+    def print(self):
+        print(self.nums)
+    @property
+    def grab(self):
+        return self.nums
+    @property
+    def string(self):
+        return self.nums
 
-def bubbleSort(array):
-    length=len(array)
-    result = True
-    global count
-    while result:
-        result = False
-        i=0
-        while (i < length-1):
-            if (array[i] > array[i+1]):
-                tempVar = array[i]
-                array[i] = array[i+1]
-                array[i+1] = tempVar
-                result = True
-            i=i+1
-            count+=1
-            print("Sorting: " + str(array))
-    return array
-'''count = 0
-time1 = time.time()
-arrayResult = str(bubbleSort(input_array))
-print("")
-print("Sorted after " + str(count) + " tries.")
-print("Sorted:  " + arrayResult)
-print("---")
-print("Overall Time: " + str(time.time()-time1) + " seconds")'''
+
+if __name__=="__main__":
+    unSortedList = [1000,10,1234,12341, 12341, 12341234]
+    sortedList = alibubbleSort(unSortedList)
+    print(sortedList.string)
