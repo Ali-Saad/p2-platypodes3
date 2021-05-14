@@ -1,0 +1,40 @@
+body {
+    background: linear-gradient(to right, #0062E6, #33AEFF);
+}
+.card{
+    width:400px;
+    height:400px;
+    background:#ffffff;
+    border-radius:8px;
+    box-shadow:0 0 10px -5px #000;
+    margin:calc(50vh - 220px) auto;
+    padding:20px 30px;
+    max-width:calc(100vw - 40px);
+    box-sizing:border-box;
+    position:relative
+}
+
+button{
+    width:335px;
+    padding:8px 12px;
+    margin:8px 0 0;
+    border:2px solid #4ca4b4;
+    border-radius:8px;
+    background:0;
+    color:#4ca4b4;
+    cursor:pointer;
+    transition:all .3s
+}
+
+button:hover{
+    background:#4ca4b4;
+    color:#ffffff
+}
+
+h3{
+    margin:10px 0;
+    padding-bottom:10px;
+    width:335px;
+    color:#78788c;
+    border-bottom:3px solid
+}

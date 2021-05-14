@@ -11,71 +11,7 @@
     <link rel="stylesheet" type="text/css" href="https://pixinvent.com/stack-responsive-bootstrap-4-admin-template/app-assets/css/colors.min.css">
     <link rel="stylesheet" type="text/css" href="https://pixinvent.com/stack-responsive-bootstrap-4-admin-template/app-assets/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
-    <style>
-
-        .grey-bg {
-            background-color: #F5F7FA;
-        }
-
-        * {
-            box-sizing: border-box;
-        }
-
-        body {
-            margin: 0;
-            font-family: Arial;
-        }
-
-        /* The grid: Four equal columns that floats next to each other */
-        .column {
-            float: left;
-            width: 25%;
-            padding: 10px;
-        }
-
-        /* Style the images inside the grid */
-        .column img {
-            opacity: 0.8;
-            cursor: pointer;
-        }
-
-        .column img:hover {
-            opacity: 1;
-        }
-
-        /* Clear floats after the columns */
-        .row:after {
-            content: "";
-            display: table;
-            clear: both;
-        }
-
-        /* The expanding image container */
-        .container {
-            position: relative;
-            display: none;
-        }
-
-        /* Expanding image text */
-        #imgtext {
-            position: absolute;
-            bottom: 15px;
-            left: 15px;
-            color: white;
-            font-size: 20px;
-        }
-
-        /* Closable button inside the expanded image */
-        .closebtn {
-            position: absolute;
-            top: 10px;
-            right: 15px;
-            color: white;
-            font-size: 35px;
-            cursor: pointer;
-        }
-
-    </style>
+    <link rel="stylesheet" href="{{ url_for('static', filename='qstat.css') }}">
 </head>
 
 <br>

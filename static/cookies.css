@@ -1,0 +1,14 @@
+body {
+    background-image: linear-gradient(to right, #0062E6, #33AEFF);;
+    height: 150%;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    color: #f1eade;
+//font-family: "Courier New", Courier, monospace;
+    font-size: 25px;
+    margin-top: 7%;
+}
+h1{
+    color: black;
+}

@@ -1,0 +1,48 @@
+html,
+body,
+header,
+#main {
+    height: 100%;
+}
+
+#main {
+    background: url("/static/home/galcier.jpeg")no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+h2a {
+    text-shadow: 2px 2px 10px black;
+}
+
+h4a {
+    text-shadow: 2px 2px 7px black;
+}
+
+buttona {
+    text-shadow: 2px 2px 7px black;
+}
+
+.btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited{
+    background-color: #fbaf44 !important;
+}
+/* Footer Styling */
+#button-addon1 {
+    color:#4ca4b4;
+}
+
+i {
+    color:#4ca4b4;
+}
+
+.form-control::placeholder {
+    font-size: 0.95rem;
+    color: #aaa;
+    font-style: italic;
+}
+
+.form-control.shadow-0:focus {
+    box-shadow: none;
+}

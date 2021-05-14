@@ -5,23 +5,9 @@
 {% endblock %}
 
 {% block content %}
-
-    <style>
-        body {
-            background-image: linear-gradient(to right, #0062E6, #33AEFF);
-            height: 200%;
-            background-position: center;
-            background-size: cover;
-            position: relative;
-            color: #f1eade;
-        //font-family: "Courier New", Courier, monospace;
-            font-size: 25px;
-            margin-top: 7%;
-        }
-        h1{
-            color: black;
-        }
-    </style>
+    <head>
+        <link rel="stylesheet" href="{{ url_for('static', filename='tos&p.css') }}">
+    </head>
 
     <body>
     <div>

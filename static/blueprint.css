@@ -1,0 +1,40 @@
+body{
+    background-image: url("https://wallpaperaccess.com/full/1075681.jpg");
+    background-size: cover;
+}
+table {
+    font-family: 'Arial';
+    margin: 200px auto;
+    border-collapse: collapse;
+    border: 1px solid #eee;
+    border-bottom: 2px solid #2f90d0;
+    box-shadow: 5px 10px 18px #5f5f5f;
+    opacity: 0.95;
+}
+table tr:hover {
+    background: #1e457f;
+}
+table tr:hover td {
+    color: #999;
+}
+table th, table td {
+    color: #8199e0;
+    border: 1px solid #eee;
+    padding: 20px 50px;
+    border-collapse: collapse;
+}
+table th {
+    background: #2f90d0;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+table td {
+    background: #ffffff;
+    color: #8199e0;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+table th.last {
+    border-right: none;
+}
