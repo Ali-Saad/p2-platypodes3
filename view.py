@@ -146,6 +146,10 @@ def jar_route():
 def qstat_route():
     return render_template("qstat.html", model=model.setup())
 
+@app.route('/templates/SomeFAQ/')
+def SomeFAQ():
+    return render_template("SomeFAQ.html", model=model.setup())
+
 @app.route("/map/", methods=["GET", "POST"])
 def map():
     if request.form:
