@@ -1,4 +1,4 @@
-class bubbleSort:
+class BubbleSort:
     def __init__(self, user_input):
         self._listO = list(map(int, user_input.split(",")))
         self._listS = self._listO.copy()
@@ -10,7 +10,6 @@ class bubbleSort:
                     temp = self._listS[j]
                     self._listS[j] = self._listS[j + 1]
                     self._listS[j + 1] = temp
-
 
     @property
     def listS(self):
@@ -26,16 +25,14 @@ class bubbleSort:
 
 
 if __name__ == "__main__":
-    # string = input("enter string: ")
     string = "43,7,9,2"
-    sortedList = bubbleSort(string)
+    sortedList = BubbleSort(string)
 
     print("Original List")
     print(sortedList.listO)
 
     print("Sorted list")
     print(sortedList.listS)
-
 
 '''list_to_sort = [8, 5, 2, 6, 1, 5, 7]
 listO = []
@@ -44,7 +41,7 @@ listO.append(int_list)
 print("OriginalList")
 print(listO)
 
-bubbleSort.__init__(int_list)
+BubbleSort.__init__(int_list)
 listS = []
 listS.append(int_list)
 print("Sorted List")

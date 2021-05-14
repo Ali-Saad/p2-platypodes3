@@ -2,7 +2,7 @@ from builtins import int
 
 from flask import Blueprint, render_template, request
 import model
-from members.pragadeesh.bubblesort import bubbleSort
+from members.pragadeesh.bubblesort import BubbleSort
 from members.pragadeesh.pascal import pascalTriangle
 
 members_pragadeesh_bp = Blueprint('pragadeesh', __name__, static_folder="static", template_folder="templates")
@@ -23,5 +23,5 @@ def lab1():
 @members_pragadeesh_bp.route("/bubble/", methods=["GET", "POST"])
 def lab2():
     if request.form:
-        return render_template("pragadeesh/bubblesort.html", bubble=bubbleSort(request.form.get("str")))
-    return render_template("pragadeesh/bubblesort.html", bubble=bubbleSort("2,9,5,7,3"))
+        return render_template("pragadeesh/bubblesort.html", bubble=BubbleSort(request.form.get("str")))
+    return render_template("pragadeesh/bubblesort.html", bubble=BubbleSort("2,9,5,7,3"))
