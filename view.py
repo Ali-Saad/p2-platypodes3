@@ -6,6 +6,7 @@ import sqlite3 as sl3
 import storefb
 import storesignup
 # import storelogin
+from mapalgo import Color
 from members.navodit import members_navodit_bp
 from members.pragadeesh import members_pragadeesh_bp
 from members.ayman import members_ayman_bp
@@ -144,3 +145,9 @@ def jar_route():
 @app.route('/qstat/')
 def qstat_route():
     return render_template("qstat.html", model=model.setup())
+
+@app.route("/map/", methods=["GET", "POST"])
+def map():
+    if request.form:
+        return render_template("map.html", color=Color(request.form.get("int")))
+    return render_template("map.html", color=Color(200))
