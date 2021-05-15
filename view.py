@@ -146,6 +146,13 @@ def jar_route():
 def qstat_route():
     return render_template("qstat.html", model=model.setup())
 
+
+@app.route('/userdashboard/')
+def userdashboard_route():
+    return render_template("userdashboard.html", model=model.setup())
+
+
+
 @app.route('/templates/SomeFAQ/')
 def SomeFAQ():
     return render_template("SomeFAQ.html", model=model.setup())
