@@ -13,7 +13,7 @@ def pragadeesh():
     return render_template("prag.html", model=model.setup())
 
 
-@members_pragadeesh_bp.route("/pascal/", methods=["GET", "POST"])
+@members.route("/pascal/", methods=["GET", "POST"])
 def lab1():
     if request.form:
         return render_template("pascal.html", pascal=pascalTriangle(int(request.form.get("row"))))
