@@ -59,9 +59,9 @@
 
     </body>
     <div>
-        <form id="pascalForm" action="/pragadeesh/pascal/" method="POST" >
+        <form id="pascalForm" action="/pragadeesh/pascal/" method="POST" >      <!-- Form takes user input -->
             <input style="margin-left: 20px" class="col-1" name="row" id="row" type="number" min="1" max="50" >
-            <button class="button_cont">Derive</button>
+            <button class="button_cont">Derive</button>     <!-- Button submits the user input -->
         </form>
         <h2 style="font-size: 20px; text-align: center; font-size: 20pt; font-family: Times">Please select values up to 50 rows.</h2>
         <h4 style="font-size: 20px; text-align: center; font-size: 14pt; font-family: Times">Note: an nth degree binomial will have coeffecients respective to pascal's triangle's row n+1</h4>
@@ -70,7 +70,7 @@
         <br>
         <div class="col-12" style="text-align: center; font-size: 2pt; font-family: Times ">
             </br>
-            {% for row in pascal.pascalList %}
+            {% for row in pascal.pascalList %}      <!-- For loop passes through each row (index) of pascalList -->
             <h3>{{row}}</h3>
             {% endfor %}}
         </div>
