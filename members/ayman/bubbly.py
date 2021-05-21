@@ -93,11 +93,21 @@ class bubbleSort:
 
 
 if __name__ == "__main__":
-    example_string = input("enter string: ")
+    #string = "43,7,9,2"
+    string = input("Enter a string: ")
+    sortedList = bubbleSort(string)
+
+    print("Original List")
+    print(sortedList.listO)
+
+    print("Sorted list")
+    print(sortedList.listS)
+
+    '''example_string = input("enter string: ")
     int_list = list(map(int, example_string.split(",")))
     listf = bubbleSort(int_list)
     print("Original List")
     print(listf.listO)
     print("Sorted List")
-    print(listf.listS)
+    print(listf.listS)'''
 
