@@ -1,0 +1,182 @@
+
+
+<html>
+<head>
+    <title>FAQ</title>
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;1,600&display=swap");
+        :root {
+            --hero-gap: 60px;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Lora", serif;
+        }
+
+        h1 {
+            font-size: calc(0.5rem + 8vmin);
+            font-weight: 600;
+            font-style: italic;
+        }
+
+        h2 {
+            font-size: calc(0.8rem + 4vmin);
+            font-weight: 600;
+            font-style: italic;
+            line-height: 1.2;
+        }
+        h6 {
+            font-size: calc(0.8rem + 2vmin);
+            font-weight: 600;
+            font-style: italic;
+            line-height: 1.2;
+        }
+
+        p {
+            font-size: calc(0.8rem + 1.25vmin);
+            line-height: 1.65;
+        }
+
+        .caption {
+            position: absolute;
+            bottom: 1rem;
+            right: 1rem;
+            color: white;
+            z-index: 2;
+            font-size: 0.6rem;
+        }
+
+        .parallax-wrapper {
+            height: 100vh;
+            overflow-x: hidden;
+            overflow-y: scroll;
+            perspective: 10px;
+        }
+
+        .parallax-content {
+            position: relative;
+            width: 100%;
+            height: calc(100vh - var(--hero-gap));
+        }
+
+        .hero {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+        .hero img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 110%;
+            -o-object-fit: cover;
+            object-fit: cover;
+            z-index: 1;
+            transform: translateZ(1px);
+        }
+        .hero .hero__title {
+            color: white;
+            z-index: 2;
+            text-align: center;
+            transform: translateZ(-2px) scale(1.2);
+        }
+        .hero .hero__title p {
+            margin-top: 0.5rem;
+            font-size: calc(0.6rem + 0.75vmin);
+        }
+        .hero .hero__title a {
+            color: white;
+        }
+        .hero::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            transform-origin: 0 100%;
+            transform: translateZ(8px);
+            pointer-events: none;
+            background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.013) 8%, rgba(0, 0, 0, 0.049) 14.8%, rgba(0, 0, 0, 0.104) 20.8%, rgba(0, 0, 0, 0.175) 26%, rgba(0, 0, 0, 0.259) 30.8%, rgba(0, 0, 0, 0.352) 35.3%, rgba(0, 0, 0, 0.45) 39.8%, rgba(0, 0, 0, 0.55) 44.5%, rgba(0, 0, 0, 0.648) 49.5%, rgba(0, 0, 0, 0.741) 55.2%, rgba(0, 0, 0, 0.825) 61.7%, rgba(0, 0, 0, 0.896) 69.2%, rgba(0, 0, 0, 0.951) 77.9%, rgba(0, 0, 0, 0.987) 88.1%, black 100%);
+            z-index: 3;
+        }
+
+        .main-content {
+            position: relative;
+            margin: 0 auto;
+            padding: var(--hero-gap) 2rem;
+            max-width: 725px;
+            background-color: white;
+        }
+        .main-content > * + * {
+            margin-top: 2rem;
+        }
+
+        .scroll-icon-container {
+            --size: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            overflow: hidden;
+            top: calc(var(--size) * -1);
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            width: calc(var(--size) * 2);
+            height: calc(var(--size) * 2);
+            border-radius: 0.15rem;
+            background-color: inherit;
+            box-shadow: 0 6px 12px -3px rgba(0, 0, 0, 0.1);
+            z-index: 4;
+        }
+        .scroll-icon-container .icon--down-arrow {
+            width: var(--size);
+            height: var(--size);
+        }
+    </style>
+</head>
+<body>
+<div class="parallax-wrapper">
+    <div class="hero parallax-content"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/225363/sterling-davis-4iXagiKXn3Y-unsplash-min.jpg" alt="Photo of city during a sunset by Sterling Davis"/>
+        <div class="hero__title">
+            <h1>Purpose </h1>
+            <h2>of Climate Change</h2>
+            <!--<p>Photo by Sterling Davis on <a href="https://unsplash.com/photos/4iXagiKXn3Y" target="_blank">Unsplash</a></p>-->
+        </div>
+    </div>
+    <div class="main-content">
+        <div class="scroll-icon-container">
+            <svg class="icon--down-arrow" viewBox="0 0 24 24">
+                <path d="M11,4H13V16L18.5,10.5L19.92,11.92L12,19.84L4.08,11.92L5.5,10.5L11,16V4Z"></path>
+            </svg>
+        </div>
+        <h2 style="text-align:center">Have questions that need answers?</h2>
+        <h6>1. Why is global warming important?</h6>
+        <p>
+             Global warming has caused suffering for many species of animals and has created natural disasters and extreme weather conditions. Through the use of latitude, one can determine the likelihood of snow and hail reaching the surface.
+        </p>
+        <h6>2. How do we stop global warming?</h6>
+        <p>
+           There are multiple solutions that will help lessen the effects of global warming. The first step is to alert others, whether that being in person or on a platform such as Twitter, Facebook, or Instagram. the second step is to power your home with renewable energy with solar panels. The third step is to reduce water waste and reduce food waste, specifically meats. Cutting down on water usage reduces carbon pollution and reducing meat consumption helps with cutting down need for more livestock, which is one of the main causes for global warming. In general, it is good to save up on materials and prevent yourself from wasting items.
+        </p>
+        <h6>3. Does global warming affect animals?</h6>
+        <p>
+            Yes, global warming greatly affects animals throughout the world. Intense drought, storms, heat waves, rising sea levels, melting glaciers and warming oceans can directly harm animals, destroy the places they live, and wreak havoc on their livelihoods and communities. Animals affected by this include seals, polar bears, arctic foxes, and more. Global warming also harms plants due to them not being able to handle the harsh weather conditions.
+        </p>
+        <h6>4. What's the purpose of this website?</h6>
+        <p>
+            The main purpose of this website is to inform others the true dangers of global warming and the impact it will hav eon our planet. Spreading the word of natural disasters and harsh environmental disasters is only the first step in solving the issue at hand. However, the more we spread the word, the more changes will occur.
+        </p>
+
+    </div>
+</div>
+</body>
+</html>
