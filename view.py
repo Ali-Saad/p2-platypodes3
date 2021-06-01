@@ -7,6 +7,8 @@ import storefb
 import storesignup
 # import storelogin
 from mapalgo import Color
+
+# Import Blueprints
 from members.navodit import members_navodit_bp
 from members.pragadeesh import members_pragadeesh_bp
 from members.ayman import members_ayman_bp
@@ -14,6 +16,7 @@ from members.ali import members_ali_bp
 from members.mustafa import members_mustafa_bp
 
 # import sqlite3 as sl3
+from subs import new
 
 # Blueprints
 app = Flask(__name__)
@@ -152,13 +155,19 @@ def userdashboard_route():
     return render_template("userdashboard.html", model=model.setup())
 
 
-
 @app.route('/templates/SomeFAQ/')
 def SomeFAQ():
     return render_template("SomeFAQ.html", model=model.setup())
+
 
 @app.route("/map/", methods=["GET", "POST"])
 def map():
     if request.form:
         return render_template("map.html", color=Color(request.form.get("int")))
     return render_template("map.html", color=Color(200))
+
+
+@app.route("/subscribe/", methods=["POST"])
+def subscribe():
+    return new(request)
+    return render_template("home.html")
