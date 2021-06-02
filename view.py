@@ -1,4 +1,7 @@
 from flask import Flask, render_template, request
+#from chatterbot import ChatBot
+#from chatterbot.trainers import ChatterBotCorpusTrainer
+#from chatterbot.trainers import ListTrainer
 import model
 import sqlite3 as sl3
 
@@ -25,6 +28,8 @@ app.register_blueprint(members_pragadeesh_bp, url_prefix='/pragadeesh')
 app.register_blueprint(members_ali_bp, url_prefix='/ali')
 app.register_blueprint(members_ayman_bp, url_prefix='/ayman')
 app.register_blueprint(members_mustafa_bp, url_prefix='/mustafa')
+
+
 
 
 @app.route('/blueprint/')
@@ -165,6 +170,23 @@ def map():
     if request.form:
         return render_template("map.html", color=Color(request.form.get("int")))
     return render_template("map.html", color=Color(200))
+
+""""bot = ChatBot("Candice")
+bot.set_trainer(ListTrainer)
+bot.train(['What is your name?', 'My name is Candice'])
+bot.train(['Who are you?', 'I am a bot' ])
+bot.train(['I have some questions', 'resort to our FAQ and informational pages to find your answers linked below', 'Platypodes', 'You?'])
+bot.set_trainer(ChatterBotCorpusTrainer)
+bot.train("chatterbot.corpus.english")
+
+@app.route("/templates/candicebot/")
+def candicebot():
+    return render_template("candicebot.html")
+
+@app.route("/get")
+def get_bot_response():
+    userText = request.args.get('msg')
+    return str(bot.get_response(userText))"""
 
 
 @app.route("/subscribe/", methods=["POST"])
