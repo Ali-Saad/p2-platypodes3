@@ -62,7 +62,8 @@ def info_route():
 
 @app.route('/info/faq/')
 def faq_route():
-    return render_template("faq.html", model=model.setup())
+    return render_template("faq.html", model=model.Faq())
+# experimenting with backend above
 
 
 @app.route('/info/prevention/')
@@ -188,8 +189,16 @@ def get_bot_response():
     userText = request.args.get('msg')
     return str(bot.get_response(userText))"""
 
+@app.route('/memes/')
+def meme_route():
+    return render_template("meme.html")
+
 
 @app.route("/subscribe/", methods=["POST"])
 def subscribe():
     return new(request)
     return render_template("home.html")
+
+@app.route('/hotspots/')
+def hot_route():
+    return render_template("hotspot.html")

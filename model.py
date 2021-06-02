@@ -20,6 +20,18 @@ def setup():
     projects = Models(source, [proj1, proj2])
     return projects
 
+class Faq():
+    def __init__(self):
+        self._q1 = "1. What is global warming?"
+
+    @property
+    def q1(self):
+        return self._q1
+
+    @q1.setter
+    def q1(self, value):
+        self._q1 = value
+
 
 # class for button label and href
 class Link():
