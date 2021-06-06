@@ -23,7 +23,7 @@ from flask_restful import Resource, Api
 
 app = Flask(__name__)
 db = SQLAlchemy()
-dbURI = 'sqlite:///database.db'
+dbURI = 'sqlite:///cc_data.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['SQLALCHEMY_DATABASE_URI'] = dbURI
 app.config['SECRET_KEY'] = 'SECRET_KEY'
