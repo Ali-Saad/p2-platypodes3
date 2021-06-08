@@ -118,9 +118,9 @@ def prevent_route():
     return render_template("prevention.html", model=model.setup())
 
 
-@app.route('/info/trends/')
+@app.route('/info/causes/')
 def trends_route():
-    return render_template("trends.html", model=model.setup())
+    return render_template("causes.html", model=model.setup())
 
 
 @app.route('/login/')
