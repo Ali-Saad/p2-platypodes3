@@ -58,7 +58,7 @@ To be added
 * [Runtime]()
 
 #### Ali's Progress:
-* Description
+* Description: Implemented a user-interactive survey page regarding climate change questions. Additionally, I added a pop up overlay feature with CSS to direct the user to the survey if they wish to do so.
 * [Runtime]()
 
 #### Mustafa's Progress:
