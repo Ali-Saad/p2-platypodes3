@@ -63,7 +63,7 @@ To be added
 * [Runtime]()
 
 #### Mustafa's Progress:
-* Description
+* Implemented an extra html page/ source page that includes multiple articles used for FAQ's. Used approutes and embedded photos/links
 * [Runtime]()
 
 ## Project Deliverable: Mini Lab
