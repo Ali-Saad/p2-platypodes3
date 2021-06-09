@@ -7,86 +7,59 @@
         body{
             background-color: #243447;
         }
-        h1{
-            text-align: center;
-            font-size: 2em;
-            font-family: "Lucida Console", Courier, monospace;
-            color: white;
+        table {
+            font-family: 'Arial';
+            margin: 50px auto;
+            border-collapse: collapse;
+            border: 1px solid #eee;
+            border-bottom: 2px solid #2f90d0;
+            box-shadow: 5px 10px 18px #5f5f5f;
         }
-        img{
-            width: 1000px;
-            align-self: center;
+        table tr:hover {
+            background: #f4f4f4;
         }
-        .center {
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-            width: 50%;
+        table tr:hover td {
+            color: #8199e0;
         }
-        .btn{
-            position: relative;
-            height:150px;
-            border: 2px solid #41f321;
-            margin: 10px;
-            display: inline-block;
-            text-decoration: #41f321;
-            letter-spacing: 2px;
+        table th, table td {
+            color: #999;
+            border: 1px solid #eee;
+            padding: 20px 50px;
+            border-collapse: collapse;
+        }
+        table th {
+            background: #2f90d0;
+            color: #fff;
             text-transform: uppercase;
-            transition: 0.5s;
-            overflow: hidden;
-            font-size: 24px;
-            color: white;
-            width: 15em;
-            text-align: center;
-            line-height: 100px;
-
+            font-size: 12px;
+        }
+        table th.last {
+            border-right: none;
         }
 
-
-
-        .btn:hover{
-            color: #111;
-        }
-
-        .btn span{
-            position: absolute;
-            display: block;
-            width: 0px;
-            height: 0px;
-            transform: translate(-50%,-50%);
-            border-radius: 100%;
-            transition: width 0.5s, height 0.5s;
-            z-index: -1;
-        }
-
-        .btn1 span {background: #4bc970;}
-        .btn2 span {background: #51d7f5;}
-        .btn3 span {background: #ebd026;}
-        .btn4 span {background: #fc4747;}
-        .btn5 span {background: #518050;}
-        .btn6 span {background: #865be3;}
-        .btn7 span {background: #6ae6cd;}
-
-
-
-
-        .btn:hover span{
-            width: 800px;
-            height: 800px;
-        }
     </style>
 </head>
 <body>
-<h1>Navodit's Mini Labs</h1>
-<div>
-<table align="center">
+<table>
+    <thead>
     <tr>
-        <td>
-            <a href="pythagorean" class="btn btn1" id="pythagorean"><span></span>Class</a>
-            <a href="bubblesort" class="btn btn2" id="bubblesort"><span></span>Bubble Sort</a>
-        </td>
+        <th>Date</th>
+        <th>Name</th>
+        <th>Mini Lab</th>
     </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>04/02/21</td>
+        <td>Pythagorean Theorem</td>
+        <td><a href="pythagorean">Link</a></td>
+    </tr>
+    <tr>
+        <td>04/30/21</td>
+        <td>Bubble Sort Algorithm</td>
+        <td><a href="bubblesort">Link</a></td>
+    </tr>
+    </tbody>
 </table>
-</div>
 </body>
 </html>
