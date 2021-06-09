@@ -42,6 +42,28 @@ To be added
 
 ---
 
+## Pre-Final Project Team Checkpoint
+### 6/8/2021
+#### Ayman's Progress:
+* Description
+* [Runtime]()
+
+#### Pragadeesh's Progress:
+* Description
+* [Runtime]()
+
+#### Navodit's Progress:
+* Description
+* [Runtime]()
+
+#### Ali's Progress:
+* Description
+* [Runtime]()
+
+#### Mustafa's Progress:
+* Description
+* [Runtime]()
+
 ## Project Deliverable: Mini Lab
 ### Week of 3/29 - 4/2 
 #### Ali's Lab:  (Score: 4/5)
