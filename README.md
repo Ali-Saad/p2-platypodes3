@@ -62,7 +62,7 @@ To be added
 #### Ali's Progress:
 * Implemented a user-interactive survey page regarding climate change questions using a form (GET POST) in the backend and an html template in the front end with input sections, dropdowns, and a submit button
 * Additionally, I added a pop up overlay feature with CSS to direct the user to the survey if they wish to do so.
-* [Runtime]()
+* [Runtime](http://76.176.59.167/survey/)
 
 #### Mustafa's Progress:
 * Implemented an extra html page/ source page that includes multiple articles used for FAQ's. Used approutes and embedded photos/links
