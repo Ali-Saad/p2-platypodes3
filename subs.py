@@ -21,8 +21,8 @@ def createTable():
     # Close the Connection
     conn.close()
 
-def dummy():
 
+def dummy():
     # Connect to Database
     conn = sqlite3.connect('subs.db')
 
@@ -38,8 +38,9 @@ def dummy():
     # Close the Connection
     conn.close()
 
-def new():
-    subs = request.form['subscribers']
+
+def new(request):
+    subs = request.form['emails']
     # Connect to Database
     conn = sqlite3.connect('subs.db')
 
@@ -72,3 +73,26 @@ def getData():
     for item in items:
         print(item)
         print("----------------")
+
+
+def delete():
+    # Connect to Database
+    conn = sqlite3.connect('subs.db')
+
+    # Create a cursor
+
+    c = conn.cursor()
+
+    subs = request.form['emails']
+
+    c.execute("DELETE FROM subs", (subs,))
+    conn.commit()
+    conn.close()
+
+
+def update():
+    conn = sqlite3.connect('subs.db')
+    c = conn.cursor()
+    c.execute("UPDATE subs SET emails = ?", (subs))
+    conn.commit()
+    conn.close()

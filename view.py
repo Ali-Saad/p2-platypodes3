@@ -243,10 +243,8 @@ def meme_route():
     return render_template("meme.html")
 
 
-@app.route("/subscribe/", methods=["POST"])
-def subscribe():
-    return new(request)
-    return render_template("home.html")
+@app.route("/subscribe", methods=["POST"])
+def subscribe(): return new(request)
 
 @app.route('/survey/')
 def sv_route():
