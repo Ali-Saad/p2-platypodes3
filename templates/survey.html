@@ -1,0 +1,60 @@
+
+
+{% block head %}
+<title>Survey</title>
+{% endblock %}
+
+{% block content %}
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='feedback.css') }}@aym">
+</head>
+
+<body>
+
+<form action="{{ url_for('feedback_form') }}" method="post" class="form">
+    <h2 style="font-family: Palatino">Climate Change Survey!</h2>
+
+    <label for="Q1" type="Do you think global warming is caused mostly by human activities or natural changes to the environment?"></label>
+    <input type="text" id="Q1" name="Do you think global warming is caused mostly by human activities or natural changes to the environment?" placeholder="Your Response" placeholder="Your Response" required>
+
+    <label for="Q2" type="Are you worried about global warming?"></label>
+    <input type="text" id="Q2" name="Are you worried about global warming?" placeholder="Your Response" required>
+
+    <label for="Q3" type="How much do you think global warming will harm future generations of people?"></label>
+    <input type="text" id="Q3" name="How much do you think global warming will harm future generations of people?" placeholder="Your Response">
+
+    <label for="Q4" type="Most scientists think global warming is happening, but which option comes closest to your own view?"></label>
+    </br>
+    <select style="width: 440px" id="Q4" name="Most scientists think global warming is happening, but which option comes closest to your own view?">
+        <option value="Most scientists think global warming is happening">Most scientists think global warming is happening</option>
+        <option value="There is a lot of disagreement among scientists about whether or not global warming is happening">There is a lot of disagreement among scientists about whether or not global warming is happening</option>
+        <option value="Most scientists think global warming is not happening">Most scientists think global warming is not happening</option>
+        <option value="Don’t know enough to say">Don’t know enough to say</option>
+    </select>
+
+    </br>
+
+
+
+    <button>Submit Survey</button>
+
+</form>
+
+<input onclick="myFunction()" type="checkbox" checked data-toggle="toggle" data-onstyle="dark">
+
+<script>
+        function myFunction() {
+            var element = document.body;
+            element.classList.toggle("dark-mode");
+        }
+    </script>
+
+</body>
+</html>
+{% endblock %}

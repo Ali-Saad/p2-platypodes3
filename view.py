@@ -171,12 +171,12 @@ def fb_route():
 
 @app.route('/feedback_form', methods=['POST'])
 def feedback_form():
-    fname = request.form['firstname']
-    lname = request.form['lastname']
-    mailid = request.form['email']
-    service = request.form['type']
-    opinion = request.form['feedback']
-    storefb.insertfeedback(fname, lname, mailid, service, opinion)
+    ##fname = request.form['firstname']
+   ## lname = request.form['lastname']
+   ## mailid = request.form['email']
+   ## service = request.form['type']
+    ##opinion = request.form['feedback']
+   ## storefb.insertfeedback(fname, lname, mailid, service, opinion)
     '''
     print (fname)
     print (lname)
@@ -247,6 +247,18 @@ def meme_route():
 def subscribe():
     return new(request)
     return render_template("home.html")
+
+@app.route('/survey/')
+def sv_route():
+    return render_template("survey.html", model=model.setup())
+
+@app.route('/survey_form', methods=['POST'])
+def survey_form():
+    Q1 = request.form['Do you think global warming is caused mostly by human activities or natural changes to the environment?']
+    Q2 = request.form['Are you worried about global warming?']
+    Q3 = request.form['How much do you think global warming will harm future generations of people?']
+    Q4 = request.form['Most scientists think global warming is happening, but which option comes closest to your own view?']
+    storefb.insertfeedback(Q1, Q2, Q3, Q4)
 
 
 @app.route('/hotspots/')
