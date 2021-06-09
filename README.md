@@ -45,7 +45,9 @@ To be added
 ## Pre-Final Project Team Checkpoint
 ### 6/8/2021
 #### Ayman's Progress:
-* Description
+* This week is the start of the final touches for the frontend.
+* The Information page is complete, with all of the pages matching the theme of the website.
+* Other tickets and tangibles can be found on the Scrum Board under the Review column and in the In Progress section.
 * [Runtime]()
 
 #### Pragadeesh's Progress:
