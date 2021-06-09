@@ -49,8 +49,9 @@ To be added
 * [Runtime]()
 
 #### Pragadeesh's Progress:
-* Description
-* [Runtime]()
+* The API was created and ready to be used this week. This was done through the backend implementation of GET and POST routes and using Postman to input information into the created database via Postman parameter POST method.
+* The first steps of the deployment process for N@TM was also complete with the platypodes climate change project successfuly running localhost on the class hardware
+* [Runtime](http://76.176.59.167/api/info)
 
 #### Navodit's Progress:
 * Description
