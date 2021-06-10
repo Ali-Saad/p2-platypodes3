@@ -56,8 +56,12 @@ To be added
 * [Runtime](http://76.176.59.167/api/info)
 
 #### Navodit's Progress:
-* Description
-* [Runtime]()
+* Fixing the personal bluprint frontpage to match the theme of the site
+* Adding Crud Functions for the subscribe feature
+* Creating the Subscribe frontend
+* App Route debugging in progress
+* [Runtime](http://76.176.59.167/)
+* [Blueprint](http://76.176.59.167/navodit/)
 
 #### Ali's Progress:
 * Implemented a user-interactive survey page regarding climate change questions using a form (GET POST) in the backend and an html template in the front end with input sections, dropdowns, and a submit button
