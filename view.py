@@ -6,13 +6,13 @@ from subs import new
 import storefb
 import storesignup
 # import storelogin
-from mapalgo import Color
 # Import Blueprints
 from members.navodit import members_navodit_bp
 from members.pragadeesh import members_pragadeesh_bp
 from members.ayman import members_ayman_bp
 from members.ali import members_ali_bp
 from members.mustafa import members_mustafa_bp
+from members.crossover import members_crossover_bp
 from flask_migrate import Migrate
 from flask_restful import Resource, Api
 
@@ -35,6 +35,7 @@ app.register_blueprint(members_pragadeesh_bp, url_prefix='/pragadeesh')
 app.register_blueprint(members_ali_bp, url_prefix='/ali')
 app.register_blueprint(members_ayman_bp, url_prefix='/ayman')
 app.register_blueprint(members_mustafa_bp, url_prefix='/mustafa')
+app.register_blueprint(members_crossover_bp, url_prefix='/crossover')
 
 
 class Info(db.Model):  # Basic Info Database
@@ -85,6 +86,7 @@ def model_create(name, carbon_footprint, paris_agreement):
         return country
     except:
         return None
+
 
 def model_delete(id):
     """fetch id"""
@@ -268,16 +270,20 @@ def meme_route():
 @app.route("/subscribe", methods=["POST"])
 def subscribe(): return new(request)
 
+
 @app.route('/survey/')
 def sv_route():
     return render_template("survey.html", model=model.setup())
 
+
 @app.route('/survey_form', methods=['POST'])
 def survey_form():
-    Q1 = request.form['Do you think global warming is caused mostly by human activities or natural changes to the environment?']
+    Q1 = request.form[
+        'Do you think global warming is caused mostly by human activities or natural changes to the environment?']
     Q2 = request.form['Are you worried about global warming?']
     Q3 = request.form['How much do you think global warming will harm future generations of people?']
-    Q4 = request.form['Most scientists think global warming is happening, but which option comes closest to your own view?']
+    Q4 = request.form[
+        'Most scientists think global warming is happening, but which option comes closest to your own view?']
     storefb.insertfeedback(Q1, Q2, Q3, Q4)
 
 
@@ -286,25 +292,12 @@ def hot_route():
     return render_template("hotspot.html")
 
 
-"""@app.route('/api/add_info', methods=['POST'])
-def add_info():
-    info_data = request.get_json()
-    print(info_data)
-
-    new_info = Info(name=info_data['name'], carbon_footprint=info_data['carbon_footprint'],
-                    paris_agreement=info_data['paris_agreement'])
-
-    db.session.add(new_info)
-    db.session.commit()
-
-    return 'Done', 201"""
-
-
 @app.route('/api/info')
 def info():
     countries = Info.query.all()
     list = [country.json() for country in countries]
     return {"list": list}
+
 
 @app.route('/api/delete/', methods=["POST"])
 def remove():
