@@ -4,22 +4,109 @@
 
 {% block content %}
     <html>
-    <table>
-        <tr>
-            <th style="text-align: center">ID</th>
-            <th style="text-align: center">Name</th>
-            <th style="text-align: center">Carbon Footprint</th>
-            <th style="text-align: center">Paris Agreement</th>
-        </tr>
+        <head>
+            <script>
+                (function(document) {
+                    'use strict';
 
-        {% for row in table %}
-            <tr>
-                <td style="text-align: center">{{ row['id'] }}</td>
-                <td style="text-align: center">{{ row['name'] }}</td>
-                <td style="text-align: center">{{ row['carbon_footprint'] }}</td>
-                <td style="text-align: center">{{ row['paris_agreement'] }}</td>
-            </tr>
-        {% endfor %}
-    </table>
+                    var LightTableFilter = (function(Arr) {
+
+                        var _input;
+
+                        function _onInputEvent(e) {
+                            _input = e.target;
+                            var tables = document.getElementsByClassName(_input.getAttribute('data-table'));
+                            Arr.forEach.call(tables, function(table) {
+                                Arr.forEach.call(table.tBodies, function(tbody) {
+                                    Arr.forEach.call(tbody.rows, _filter);
+                                });
+                            });
+                        }
+
+                        function _filter(row) {
+                            var text = row.textContent.toLowerCase(), val = _input.value.toLowerCase();
+                            row.style.display = text.indexOf(val) === -1 ? 'none' : 'table-row';
+                        }
+
+                        return {
+                            init: function() {
+                                var inputs = document.getElementsByClassName('light-table-filter');
+                                Arr.forEach.call(inputs, function(input) {
+                                    input.oninput = _onInputEvent;
+                                });
+                            }
+                        };
+                    })(Array.prototype);
+
+                    document.addEventListener('readystatechange', function() {
+                        if (document.readyState === 'complete') {
+                            LightTableFilter.init();
+                        }
+                    });
+
+                })(document);
+            </script>
+            <style>
+                body {
+                    padding:20px;
+                    max-width:800px;
+                    margin:auto auto;
+                    font-family:sans;
+                }
+
+                table {
+                    width:100%
+                } th {
+                      background:#666;
+                      color:#fff;
+                  } td {
+                        padding:5px;
+                    }
+
+                input {
+                    width:100%;
+                    height: 24px;
+                    font-size: 18px;
+                    padding:2px;
+                    border:0;
+                }
+
+                h1 {
+                    font-weight: normal;
+                }
+            </style>
+        </head>
+
+        <section class="container">
+            <h2>Map of Climate Change</h2>
+            <p>Please select a country to view more information.</p>
+            <img style="alignment: center" width="800" height="429.079159935" src="/static/map/newmap.png">
+            <br>
+            <hr>
+            <input type="search" class="light-table-filter" data-table="order-table" placeholder="Filter">
+            <hr>
+            <table class="order-table table">
+                <thead>
+                <tr>
+                    <th style="text-align: center">ID</th>
+                    <th style="text-align: center">Name</th>
+                    <th style="text-align: center">Carbon Footprint</th>
+                    <th style="text-align: center">Paris Agreement</th>
+                </tr>
+                </thead>
+
+                {% for row in table %}
+                    <tbody>
+                        <tr>
+                            <td style="text-align: center">{{ row['id'] }}</td>
+                            <td style="text-align: center">{{ row['name'] }}</td>
+                            <td style="text-align: center">{{ row['carbon_footprint'] }}</td>
+                            <td style="text-align: center">{{ row['paris_agreement'] }}</td>
+                        </tr>
+                    </tbody>
+                {% endfor %}
+            </table>
+            <hr>
+        </section>
     </html>
 {% endblock %}
