@@ -1,21 +1,25 @@
-
 {% block head %}
-<title> Map Test </title>
+    <title> Climate Change Map </title>
 {% endblock %}
 
 {% block content %}
-<html>
-    <body>
-        <div>
-            <form id="MapForm" action="/map/" method="POST" >
-                <input style="border-radius: 20px" class="col-1" name="int" id="int" type="integer">
-                <button style="margin-left: 20px" class="btn btn-primary">Color!</button>
-            </form>
-            <h1 style="color: black">Hello</h1>
-            <svg width="400" height="110">
-                <rect width="300" height="100" style="fill:#1e457f;stroke-width:3;stroke:#1e457f" />
-            </svg>
-        </div>
-    </body>
-</html>
+    <html>
+    <table>
+        <tr>
+            <th style="text-align: center">ID</th>
+            <th style="text-align: center">Name</th>
+            <th style="text-align: center">Carbon Footprint</th>
+            <th style="text-align: center">Paris Agreement</th>
+        </tr>
+
+        {% for row in table %}
+            <tr>
+                <td style="text-align: center">{{ row['id'] }}</td>
+                <td style="text-align: center">{{ row['name'] }}</td>
+                <td style="text-align: center">{{ row['carbon_footprint'] }}</td>
+                <td style="text-align: center">{{ row['paris_agreement'] }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+    </html>
 {% endblock %}

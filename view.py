@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, redirect, url_for
 from flask_sqlalchemy import SQLAlchemy
 # import json
 import model
@@ -38,7 +38,7 @@ app.register_blueprint(members_mustafa_bp, url_prefix='/mustafa')
 
 
 class Info(db.Model):  # Basic Info Database
-    id = db.Column(db.Integer, primary_key=True)
+    id = db.Column('id', db.Integer, primary_key=True)
     name = db.Column(db.String(50))
     carbon_footprint = db.Column(db.Integer)
     paris_agreement = db.Column(db.String(50))
@@ -57,15 +57,25 @@ class Info(db.Model):  # Basic Info Database
             country = model_create(name, carbon_footprint, paris_agreement)
             if country:
                 return country.json()
-            return {'failed': None}, 404  # need to have better message on errors
+            return {'failed': None}, 404
+
+    class Delete(Resource):
+        def delete(self, id):
+            model_delete(id)
 
     api.add_resource(Create, '/api/add_info/<string:name>/<int:carbon_footprint>/<string:paris_agreement>')
+    api.add_resource(Delete, '/api/delete/<int:id>')
+
+
+def id(args):
+    pass
 
 
 def model_create(name, carbon_footprint, paris_agreement):
     """prepare data for primary table extracting from form"""
     try:
         country = Info(
+            id=id,
             name=name,
             carbon_footprint=carbon_footprint,
             paris_agreement=paris_agreement
@@ -75,6 +85,19 @@ def model_create(name, carbon_footprint, paris_agreement):
         return country
     except:
         return None
+
+def model_delete(id):
+    """fetch id"""
+    id = id
+    db.session.query(Info).filter(Info.id == id).delete()
+    """commit changes to database"""
+    db.session.commit()
+
+
+def model_read_all():
+    """convert Users table into a list of dictionary rows"""
+    countries = Info.query.all()
+    return [country.json() for country in countries]
 
 
 @app.route('/blueprint/')
@@ -172,11 +195,11 @@ def fb_route():
 @app.route('/feedback_form', methods=['POST'])
 def feedback_form():
     ##fname = request.form['firstname']
-   ## lname = request.form['lastname']
-   ## mailid = request.form['email']
-   ## service = request.form['type']
+    ## lname = request.form['lastname']
+    ## mailid = request.form['email']
+    ## service = request.form['type']
     ##opinion = request.form['feedback']
-   ## storefb.insertfeedback(fname, lname, mailid, service, opinion)
+    ## storefb.insertfeedback(fname, lname, mailid, service, opinion)
     '''
     print (fname)
     print (lname)
@@ -213,11 +236,10 @@ def SomeFAQ():
     return render_template("SomeFAQ.html", model=model.setup())
 
 
-@app.route("/map/", methods=["GET", "POST"])
+@app.route("/map/")
 def map():
-    if request.form:
-        return render_template("map.html", color=Color(request.form.get("int")))
-    return render_template("map.html", color=Color(200))
+    records = model_read_all()
+    return render_template("map.html", table=records)
 
 
 """"bot = ChatBot("Candice")
@@ -264,7 +286,7 @@ def hot_route():
     return render_template("hotspot.html")
 
 
-'''@app.route('/api/add_info', methods=['POST'])
+"""@app.route('/api/add_info', methods=['POST'])
 def add_info():
     info_data = request.get_json()
     print(info_data)
@@ -275,7 +297,7 @@ def add_info():
     db.session.add(new_info)
     db.session.commit()
 
-    return 'Done', 201'''
+    return 'Done', 201"""
 
 
 @app.route('/api/info')
@@ -283,6 +305,15 @@ def info():
     countries = Info.query.all()
     list = [country.json() for country in countries]
     return {"list": list}
+
+@app.route('/api/delete/', methods=["POST"])
+def remove():
+    if request.form:
+        """fetch id"""
+        id = request.form.get("id")
+        # model_delete expects a userid
+        model_delete(id)
+    return redirect(url_for('.map'))
 
 
 if __name__ == "__main__":
