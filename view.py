@@ -13,6 +13,7 @@ from members.ayman import members_ayman_bp
 from members.ali import members_ali_bp
 from members.mustafa import members_mustafa_bp
 from members.crossover import members_crossover_bp
+from members.deliverable import members_deliverable_bp
 from flask_migrate import Migrate
 from flask_restful import Resource, Api
 
@@ -36,6 +37,7 @@ app.register_blueprint(members_ali_bp, url_prefix='/ali')
 app.register_blueprint(members_ayman_bp, url_prefix='/ayman')
 app.register_blueprint(members_mustafa_bp, url_prefix='/mustafa')
 app.register_blueprint(members_crossover_bp, url_prefix='/crossover')
+app.register_blueprint(members_deliverable_bp, url_prefix='/deliverable')
 
 
 class Info(db.Model):  # Basic Info Database
