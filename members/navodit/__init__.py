@@ -4,7 +4,7 @@ from members.navodit import tri
 from members.navodit import sort
 from members.navodit.sort import listify
 
-members_navodit_bp = Blueprint('navodit', __name__, static_folder="bp_static", template_folder="templates")
+members_navodit_bp = Blueprint('navodit', __name__, static_folder="navo_bp", template_folder="templates")
 
 
 @members_navodit_bp.route("/")
