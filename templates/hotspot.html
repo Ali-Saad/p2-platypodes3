@@ -1,5 +1,142 @@
-
 <html>
+<head>
+    <title>FAQ</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='infosubset.css') }}">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+<body>
+<div class="parallax-wrapper">
+    <div class="hero parallax-content"><img src="https://cdn.pixabay.com/photo/2015/11/07/11/03/satellite-1030779_1280.jpg" alt="Globe"/>
+        <div class="hero__title">
+            <h1>Climate Change Hotspots</h1>
+            <h2>Quick Statistics and Reasoning</h2>
+        </div>
+    </div>
+    <div class="main-content">
+        <div class="scroll-icon-container">
+            <svg class="icon--down-arrow" viewBox="0 0 24 24">
+                <path d="M11,4H13V16L18.5,10.5L19.92,11.92L12,19.84L4.08,11.92L5.5,10.5L11,16V4Z"></path>
+            </svg>
+        </div>
+        <!-- Introduction -->
+        <h2 style="text-align:center">Which countries are most threatened by and vulnerable to climate change?</h2>
+        <h3>
+            The Germanwatch institute presented the results of the Global Climate Risk Index 2020 during COP25 in Madrid.
+            According to this analysis, based on the impacts of extreme weather events and the socio-economic losses they cause, Japan, the Philippines and Germany are the most affected places by climate change today.
+        </h3>
+        <img src="https://www.iberdrola.com/wcorp/gc/prod/en_US/comunicacion/paises_amenazados_mult_1_res/Paises_Amenazados_746x419.jpg" alt="Hurricane">
+        <p>In recent weeks of 2019, we have seen a country like Australia burning and losing 8.4 million hectares, more than 1,300 homes, 27 human lives and, according to University of Sydney estimates, about 1 billion animals in only four months due to some of the worst fires in its history. What is to blame for this? The extreme drought and intense heat caused by climate change in this region.</p>
+
+
+        <h3>What is the climate risk index?</h3>
+        <p>
+            Climate risk is a concept that reflects countries' vulnerability to the direct consequences — deaths and economic losses — of extreme weather events and is measured annually by the Germanwatch observatory via the Global Climate Risk Index.
+            Episodes as the Australia's one, and other similar, remind us that some areas of the planet are more exposed than others to impacts caused by climate change.
+        </p>
+        <hr>
+        <p>The 2020 Climate Risk Index was presented in Madrid during the last United Nations Conference on Climate Change (COP25 Chile) and determines the 10 countries presently most affected by climate change — based on facts from 2018 —. These countries are:</p>
+
+
+
+        <!-- Ranking Countries -->
+        <h4>1. JAPAN (Climate Risk Index: 5.5)</h4>
+        <p>
+            Heavy rains, heat waves, the Osaka earthquake and Jebi typhoon, which ravaged Japan in 2018, made it the most threatened country in the world by climate change.
+            Weather events themselves were behind 1,282 deaths on the island — 1.01 per 100,000 inhabitants — and caused economic losses of 35,839 million dollars and a collapse of per capita Gross Domestic Product of 0.64%.
+        </p>
+        <h4>2. PHILIPPINES (Climate Risk Index: 11.17)</h4>
+        <p>
+            Typhoon Mangkhut's passage through the Philippines in 2018 affected more than 250,000 people across the country and left at least 59 dead due to torrential rainfall.
+            According to Germanwatch, extreme weather events caused a total of 455 deaths in the country that year — 0.43 per 100,000 inhabitants — as well as more than 4,540 million US dollars in economic losses and a drop in GDP of 0.48% per capita.
+        </p>
+        <h4>3. GERMANY (Climate Risk Index: 13.83)</h4>
+        <p>
+            The German country ranks the third position of the most affected countries by climate risk due to the heat wave it suffered in 2018, the hottest year in its history with damages of more than 3,500 million dollars for the agricultural sector.
+            The weather events in Germany caused a total of 1,246 deaths — 1.5 per 100,000 inhabitants — losses of 5,038 million dollars and a decrease in per capita GDP of 0.12%.
+        </p>
+
+        <!-- Image Carousel -->
+        <div class="carousel slide" id="carousel-596454">
+            <ol class="carousel-indicators">
+                <li data-slide-to="0" data-target="#carousel-596454">
+                </li>
+                <li data-slide-to="1" data-target="#carousel-596454">
+                </li>
+                <li data-slide-to="2" data-target="#carousel-596454" class="active">
+                </li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item">
+                    <img class="d-block w-100" alt="Carousel Bootstrap First" src="https://www.iberdrola.com/wcorp/gc/prod/en_US/comunicacion/paises_amenazados_mult_2_res/Paises_Amenazados_746x419_1.jpg" />
+                    <div class="carousel-caption">
+                        <p style="background-color: #2f90d0">
+                            Earthquakes are a constant event in Japan and affect the country's infrastructure.
+                        </p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" alt="Carousel Bootstrap Second" src="https://www.iberdrola.com/wcorp/gc/prod/en_US/comunicacion/paises_amenazados_mult_2_res/Paises_Amenazados_746x419_2.jpg" />
+                    <div class="carousel-caption">
+                        <p style="background-color: #2f90d0">
+                            Extreme weather events like typhoons hit the Philippines hard.
+                        </p>
+                    </div>
+                </div>
+                <div class="carousel-item active">
+                    <img class="d-block w-100" alt="Carousel Bootstrap Third" src="https://www.iberdrola.com/wcorp/gc/prod/en_US/comunicacion/paises_amenazados_mult_2_res/Paises_Amenazados_746x419_3.jpg" />
+                    <div class="carousel-caption">
+                        <p style="background-color: #2f90d0">
+                            The heatwave in Germany in the summer of 2018 caused millions in losses in the agricultural sector.
+                        </p>
+                    </div>
+                </div>
+            </div> <a class="carousel-control-prev" href="#carousel-596454" data-slide="prev"><span class="carousel-control-prev-icon"></span> <span class="sr-only">Previous</span></a> <a class="carousel-control-next" href="#carousel-596454" data-slide="next"><span class="carousel-control-next-icon"></span> <span class="sr-only">Next</span></a>
+        </div>
+
+
+
+        <h4>4. MADAGASCAR (Climate Risk Index: 15.83)</h4>
+        <p>
+            Global warming and climate risks threaten the survival of the lemur and other endemic animal species on the island.
+            Adverse weather events have also made the African country one of the most vulnerable to climate change with 72 deaths — 0.27 per 100,000 inhabitants — about 568 million dollars in economic losses and a drop in per capita GDP of 1.32%.
+        </p>
+        <h4>5. INDIA (Climate Risk Index: 18.17)</h4>
+        <p>
+            The Indian subcontinent is other major victim of extreme heat, floods and sandstorms, among other devastating natural events.
+            In 2018 caused more than 2,000 deaths — 0.16 per 100,000 inhabitants —, losses of 37,807 million dollars and a decrease in per capita GDP of 0.36%.
+        </p>
+        <h4>6. SRI LANKA (Climate Risk Index: 19)</h4>
+        <p>
+            This small country in the gulf of Bengala could lose a substantial part of its population due to future climate migrations.
+            Furthermore, weather events in 2018 caused 38 deaths in Sri Lanka — 0.18 per 100,000 inhabitants —, over 3,625 million dollars in losses and a collapse in per capita GDP of 1.24%.
+        </p>
+        <h4>7. KENYA (Climate Risk Index: 19.67)</h4>
+        <p>
+            This African country is another of those most vulnerable to climate change due to the droughts of 2018 that, months later, left more than a million people on the brink of famine.
+            The hostile climate of that year in Kenya claimed the lives of 113 people — 0.24 per 100,000 inhabitants — and produced losses of more than 708 million dollars and a drop in per capita GDP of 0.4%.
+        </p>
+        <h4>8. RUANDA (Climate Risk Index: 21.17)</h4>
+        <p>
+            This small African country, affected during the past five hundred years by periods of famine and armed conflict, is another of the country's most vulnerable to global warming and extreme weather events.
+            In 2018, these caused 88 deaths — 0.73 per 100,000 inhabitants —, economic losses of 93.2 million dollars and a decrease in per capita GDP of 0.34%.
+        </p>
+        <h4>9. CANADA (Climate Risk Index: 21.83)</h4>
+        <p>
+            It may surprise you to see this giant among the places most affected by climate change, but a government study suggests that Canada is warming twice as fast as the rest of the planet.
+            Furthermore, weather events in 2018 caused 103 deaths — 0.28 per 100,000 inhabitants —, losses of 2,282 million dollars and a decrease in per capita GDP of 0.12%.
+        </p>
+        <h4>10. FIJI (Climate Risk Index: 22.5)</h4>
+        <p> This archipelago paradise located in Oceania closes the ranking of most affected countries by climate change. This and the cyclones make the country live in constant reconstruction.
+            Eight dead people in 2018 due to extreme weather events — 0.9 per 100,000 inhabitants — losses of almost 120 million dollars and a fall in per capita GDP of 1.14% is the balance that offers this study.</p>
+
+
+    </div>
+</div>
+</body>
+</html>
+<!--<html lang="eng">
 <head>
     <style>
         * {
@@ -97,7 +234,7 @@
         h1 {
             font-size: 40px;
             color: var(--contrast-color);
-            margin-bottom: 20px;
+            margin-top: 30px;
             transform: translateY(100px);
             animation: slideUp .8s ease forwards .5s;
         }
@@ -129,6 +266,7 @@
             }
         }
     </style>
+    <title>Hotspots</title>
 </head>
 <body>
 <div class= 'container'>
@@ -155,4 +293,4 @@
 </div>
 <div class="overlay"></div>
 </body>
-</html>
+</html>-->
