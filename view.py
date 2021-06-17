@@ -270,7 +270,9 @@ def meme_route():
 
 
 @app.route("/subscribe", methods=["POST"])
-def subscribe(): return new(request)
+def subscribe():
+    new(request)
+    return render_template("home.html")
 
 
 @app.route('/survey/')

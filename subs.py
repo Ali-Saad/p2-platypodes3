@@ -1,5 +1,5 @@
 import sqlite3
-from flask import request
+#from flask import request
 
 
 def createTable():
@@ -12,7 +12,9 @@ def createTable():
 
     # Create a Table
     c.execute("""CREATE TABLE subs (
-            email text 
+            email text,
+            
+            PRIMARY KEY(email) 
         )""")
 
     # Commit the command
@@ -30,7 +32,11 @@ def dummy():
 
     c = conn.cursor()
     print("writing dummy data")
-    c.execute("INSERT INTO subs VALUES (platypodes@gmail.com) ")
+    val = [
+        ('abc@abc.com'),
+
+         ]
+    c.execute("INSERT INTO subs VALUES (?)", val)
     print("data added")
     # Commit the command
     conn.commit()
@@ -43,12 +49,12 @@ def new(request):
     subs = request.form['emails']
     # Connect to Database
     conn = sqlite3.connect('subs.db')
-
+    val =[subs]
     # Create a cursor
 
     c = conn.cursor()
     print("Adding Data")
-    c.execute("INSERT INTO subs VALUES (?) ", subs)
+    c.execute("INSERT INTO subs VALUES (?) ", val)
     print("Data Added")
     # Commit the command
     conn.commit()
