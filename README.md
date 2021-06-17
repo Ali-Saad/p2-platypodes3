@@ -42,6 +42,17 @@ To be added
 
 ---
 
+# Final Deliverable
+### How it's made: 6/16/21
+* It all started with our team wanting to design a project that would help people and have an actual pupose, which led to our idea of making a Climate Change Tracker.
+* We brainstormed some ides on how we would go about doing this, and decided we should have some data pages and some other informational pages, with other various interactions for the user.
+* We thought it would be best to relate it to the status of the Paris Agreement.
+* As for the informational pages, we decided to include important facts that not only were relevant, but also guided the user in understanding what they could do.
+* In general, our website provides a completely guided experience for the user that will help them see this global phenomenon through a different light.
+### To learn more about how this website was designed, its key elements, and the final product that it is now, visit [the Deliverable page on our site](https://climatechange.nighthawkcodingsociety.com/deliverable/) where we have a detailed guide on each technical and its purpose.
+
+---
+
 ## Pre-Final Project Team Checkpoint
 ### 6/8/2021
 #### Ayman's Progress:
