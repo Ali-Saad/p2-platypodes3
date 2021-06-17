@@ -6,8 +6,22 @@
 * Learn more about our plan in the Project Plan below.
 
 Table of Contents
----
-To be Added
+=================
+
+* [Members and Roles](#members-and-roles)
+* [Run Instructions](#run-instructions)
+* [Git Instructions](#git-instructions)
+* [Project Plan](#project-plan)
+
+* [Final Deliverable](#final-deliverable)
+
+* [Pre-Final Project Team Checkpoint](#pre-final-project-team-checkpoint)
+
+* [Sprint #1](#sprint-1)
+
+* [Project Log](#project-log)
+
+
 
 # Members and Roles
 
