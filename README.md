@@ -37,11 +37,6 @@ To be Added
 
 ---
 
-# Project Details
-To be added
-
----
-
 # Final Deliverable
 ### How it's made: 6/16/21
 * It all started with our team wanting to design a project that would help people and have an actual pupose, which led to our idea of making a Climate Change Tracker.
