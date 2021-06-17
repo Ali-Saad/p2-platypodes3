@@ -123,7 +123,7 @@ def about_route():
 # lock screen test
 @app.route('/lock/')
 def lock_route():
-    return render_template("lock.html", model=model.setup())
+    return render_template("random/lock.html", model=model.setup())
 
 
 # info app routes
@@ -237,7 +237,7 @@ def userdashboard_route():
 
 @app.route('/templates/SomeFAQ/')
 def SomeFAQ():
-    return render_template("SomeFAQ.html", model=model.setup())
+    return render_template("random/SomeFAQ.html", model=model.setup())
 
 
 @app.route("/map/")
@@ -266,7 +266,7 @@ def get_bot_response():
 
 @app.route('/memes/')
 def meme_route():
-    return render_template("meme.html")
+    return render_template("random/meme.html")
 
 
 @app.route("/subscribe", methods=["POST"])
